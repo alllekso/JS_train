@@ -1,4 +1,99 @@
-.login_form {
-    display: inline-flex;
-    flex-direction: column;
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    padding-top:30px;
+
 }
+
+.start_login_button{
+    width: 300px;
+    padding: 40px 20px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #ff0066;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.start_login_button:hover{
+    background-color: #5645ff;
+}
+/*.login_form{*/
+/*    box-sizing: border-box;*/
+/*}*/
+
+form {
+    width: 300px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px #5645ff;
+    background-color: #befffa;
+    font-family: 'Montserrat', sans-serif;
+}
+.img{
+    width: 300px;
+
+
+    border-radius: 10px;
+}
+.form_title{
+    text-align: center;
+    color: #000000;
+    padding: 0;
+}
+ .form_group{
+     font-size: 16px;
+     margin-bottom: 20px;
+     /*padding-top: 220px;*/
+
+ }
+
+ .form_label{
+     color: darkgray;
+ }
+
+ .form_input{
+     width: 275px;
+     padding: 10px;
+     font-family: 'Montserrat', sans-serif;
+     border: none;
+     border-radius: 5px;
+
+ }
+
+ .form_button{
+     padding: 10px 20px;
+     border: none;
+     border-radius: 5px;
+     color: #fff;
+     background-color: #5645ff;
+     cursor: pointer;
+     font-family: 'Montserrat', sans-serif;
+     font-weight: bold;
+ }
+
+.form_button:hover{
+     background-color: #ff0066;
+ }
+
+
+.error_message, .success_message, .warning_message{
+    padding-top: 2px;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    color: red;
+}
+
+.success_message{
+    color: green;
+}
+
+.warning_message{
+    color: chocolate;
+}
+
