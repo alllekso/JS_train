@@ -23,28 +23,30 @@ body {
 .start_login_button:hover{
     background-color: #5645ff;
 }
-/*.login_form{*/
-/*    box-sizing: border-box;*/
-/*}*/
 
 form {
     width: 300px;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 16px #5645ff;
-    background-color: #befffa;
+    background-image:linear-gradient(to top right, #291152 0%, #5a004a 70%, #ff0066 100%);
     font-family: 'Montserrat', sans-serif;
 }
 .img{
     width: 300px;
-
-
     border-radius: 10px;
+    position: absolute;
+    z-index: 0;
+    box-shadow: 0 4px 16px #5645ff;
 }
+
 .form_title{
     text-align: center;
-    color: #000000;
-    padding: 0;
+    color: #ffffff;
+    padding: 120px 0 30px;
+    position: relative;
+    z-index: 10;
+
 }
  .form_group{
      font-size: 16px;
