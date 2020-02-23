@@ -7,6 +7,11 @@ body {
 
 }
 
+.login_form{
+
+min-height: 250px;
+}
+
 .start_login_button{
     width: 300px;
     padding: 40px 20px;
@@ -26,7 +31,7 @@ body {
 
 form {
     width: 300px;
-    padding: 30px;
+    padding: 5px 30px;
     border-radius: 10px;
     box-shadow: 0 4px 16px #5645ff;
     background-image:linear-gradient(to top right, #291152 0%, #5a004a 70%, #ff0066 100%);
@@ -40,15 +45,15 @@ form {
     box-shadow: 0 4px 16px #5645ff;
 }
 
-.form_title{
+.question_text_style{
     text-align: center;
     color: #ffffff;
-    padding: 120px 0 30px;
+    padding-top: 150px;
     position: relative;
     z-index: 10;
 
 }
- .form_group{
+ .login_group .pass_group{
      font-size: 16px;
      margin-bottom: 20px;
      /*padding-top: 220px;*/
