@@ -3,6 +3,8 @@ body {
     padding: 0;
     margin: 0;
     overflow-x: hidden;
+    overflow-y: hidden;
+    font-family: 'Montserrat', sans-serif;
 }
 section {
     display: flex;
@@ -108,28 +110,45 @@ section {
 
 
 /*ход на страницу*/
+
+.page{
+    display:inline-block;
+}
+
+
 .img-page{
     width: 100%;
     position: absolute;
     z-index: 0;
+    padding: 0;
+    margin: 0;
 }
-/*@media handheld and(min-width:320px){*/
-/*    .personage_frog img{*/
-/*        width: 100px;*/
-/*        position: relative;*/
-/*        z-index: 10;*/
-/*        top: 7px;*/
-/*        left: 300px;}*/
 
-/*}*/
 .personage_frog{
-    width: 100px;
+    width:300px;
     position: relative;
-    z-index: 10;
-    top: 700px;
+    z-index: 13;
     right: 10px;
     left: 1600px;
+    bottom:300px;
+    filter: drop-shadow(3px 15px 5px #000);
+}
 
+.personage_flami{
+    position: relative;
+    z-index: 10;
+    left: -350px;
+}
+
+.personage_flami{
+    animation-name: flami;
+    animation-duration: 2s;
+}
+
+@keyframes flami {
+    0%{
+        transform: translateY(50%);
+    }
 }
 
 .personage_frog{
@@ -145,3 +164,21 @@ section {
         transform: translateX(50%);
     }
 }
+
+
+.welcome_title{
+    width: 300px;
+    vertical-align: center;
+    background-color: black;
+    position: relative;
+    z-index: 12;
+   top: 150px;
+
+}
+.welcome{
+    position: relative;
+    z-index: 12;
+    color:#ffffff;
+    text-align: center;
+    padding: 50px 0 50px;
+    text-shadow: 8px 3px 11px #5645ff, 0 0 2em #ff0066;}
