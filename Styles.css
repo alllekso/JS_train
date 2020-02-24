@@ -1,16 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-
 body {
     display: flex;
     justify-content: center;
     padding-top:30px;
-
+    background-color: #000000
 }
 
-.login_form{
-
-min-height: 250px;
-}
 
 .start_login_button{
     width: 300px;
@@ -29,9 +23,10 @@ min-height: 250px;
     background-color: #5645ff;
 }
 
-form {
+.login_form{
+    min-height: 250px;
     width: 300px;
-    padding: 5px 30px;
+    padding: 5px  30px 30px;
     border-radius: 10px;
     box-shadow: 0 4px 16px #5645ff;
     background-image:linear-gradient(to top right, #291152 0%, #5a004a 70%, #ff0066 100%);
@@ -53,15 +48,18 @@ form {
     z-index: 10;
 
 }
- .login_group .pass_group{
+.login_group{
      font-size: 16px;
-     margin-bottom: 20px;
-     /*padding-top: 220px;*/
-
+     padding: 30px 0 20px;
  }
+.pass_group{
+    font-size: 16px;
+    padding-bottom:20px;
+}
 
- .form_label{
-     color: darkgray;
+.form_label{
+    color: darkgray;
+    margin-bottom: 5px;
  }
 
  .form_input{

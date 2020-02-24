@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <title>Login</title>
     <link rel="stylesheet" href="Styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 </head>
-<body style="background-color: #000000">
 <script src=script.js>script</script>
 
 <button class="start_login_button" onclick="show_login_login_form()" id="start_login_button">Login</button>
@@ -15,14 +15,14 @@
 <form class="login_form" id="login_form_is_hidden" hidden>
 
     <div>
-        <img class="img" src="img/love.jpg" alt="flamingo_img">
+        <img class="img" src="img/love.gif" alt="flamingo_img">
         <h1 class="question_text_style" id="hello_message"></h1>
     </div>
 
 
     <div class="login_group" hidden>
-        <label class="form_label">Name</label>
-        <input id="name" class="form_input" placeholder="Your name" value="Lex" required>
+        <label class="form_label">Name</label><br>
+        <input  id="name" class="form_input" placeholder="Your name" value="Lex" required>
         <div class="error_message" id="name_notifications_field"> </div>
     </div>
 
