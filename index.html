@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <script src=script.js>script</script>
-
+<body>
 <button class="start_login_button" onclick="show_login_login_form()" id="start_login_button">Login</button>
 
 
@@ -21,15 +21,15 @@
 
 
     <div class="login_group" hidden>
-        <label class="form_label">Name</label><br>
-        <input  id="name" class="form_input" placeholder="Your name" value="Lex" required>
+        <label for="name" class="form_label">Name</label><br>
+        <input id="name" class="form_input" placeholder="Your name" value="Lex" required>
         <div class="error_message" id="name_notifications_field"> </div>
     </div>
 
 
     <div class="pass_group" hidden>
-        <label class="form_label">Password</label>
-        <input  id = 'pass' class="form_input" placeholder="Enter your password" required>
+        <label for="pass" class="form_label">Password</label>
+        <input type="password" name="pass" id = 'pass' class="form_input" placeholder="Enter your password" required>
         <div class="error_message" id="pass_notifications_field"> </div>
     </div>
 
