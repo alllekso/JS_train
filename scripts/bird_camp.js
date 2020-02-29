@@ -31,3 +31,8 @@ function get_user_choose() {
 // }
 
 
+
+let audio = document.getElementById("mySoundClip");
+ document.querySelector(".black_side").mouseenter(function() {
+    audio.play();
+ });
