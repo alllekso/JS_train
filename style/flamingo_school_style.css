@@ -11,15 +11,23 @@ body {
     color: white;
     text-shadow: 8px 3px 11px #5645ff, 0 0 2em #ff0066;;
 }
+
+.black_side{
+    filter: drop-shadow(0 4px 6px #5645ff);
+}
+
 .black_side:hover {
     width: 970px;
+    filter: drop-shadow(0 4px 6px #ff0066);
 }
 
 .white_side {
     float: right;
+    filter: drop-shadow(0 4px 6px #5645ff);
 }
 .white_side:hover {
     width: 950px;
+    filter: drop-shadow(0 4px 6px #ff0066);
 }
 
 .form_question {
@@ -45,6 +53,9 @@ body {
     font-size: 17px;
     font-family: sans-serif;
     transition: 0.3s;
+}
+.choose_side_button:hover {
+    background-color: #5645ff;
 }
 
 .choose_side_input {
