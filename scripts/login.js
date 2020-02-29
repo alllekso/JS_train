@@ -14,7 +14,7 @@ function login() {
 
 }
 
-function show_login_form() {
+function show_login_login_form(){
     document.getElementById("login_form_is_hidden").hidden = false;
     document.getElementById("start_login_button").hidden = true;
     setTimeout(ask_name, 1500);

@@ -4,7 +4,7 @@ body {
     margin: 0;
     overflow-x: hidden;
     overflow-y: hidden;
-    font-family: 'Montserrat', sans-serif;
+    font-family: sans-serif;
 }
 section {
     display: flex;
@@ -21,7 +21,7 @@ section {
     background-color: #ff0066;
     cursor: pointer;
     font-size: 20px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: sans-serif;
     font-weight: bold;
     transition: 0.3s;
 }
@@ -36,7 +36,7 @@ section {
     border-radius: 10px;
     box-shadow: 0 4px 16px #5645ff;
     background-image:linear-gradient(to top right, #291152 0%, #5a004a 70%, #ff0066 100%);
-    font-family: 'Montserrat', sans-serif;
+    font-family: sans-serif;
 }
 .img{
     width: 300px;
@@ -71,7 +71,7 @@ section {
  .form_input{
      width: 275px;
      padding: 10px;
-     font-family: 'Montserrat', sans-serif;
+     font-family: sans-serif;
      border: none;
      border-radius: 5px;
 
@@ -84,7 +84,7 @@ section {
      color: #fff;
      background-color: #5645ff;
      cursor: pointer;
-     font-family: 'Montserrat', sans-serif;
+     font-family: sans-serif;
      font-weight: bold;
  }
 
@@ -96,7 +96,7 @@ section {
 .error_message, .success_message, .warning_message{
     padding-top: 2px;
     font-size: 12px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: sans-serif;
     color: red;
 }
 
@@ -109,76 +109,3 @@ section {
 }
 
 
-/*ход на страницу*/
-
-.page{
-    display:inline-block;
-}
-
-
-.img-page{
-    width: 100%;
-    position: absolute;
-    z-index: 0;
-    padding: 0;
-    margin: 0;
-}
-
-.personage_frog{
-    width:300px;
-    position: relative;
-    z-index: 13;
-    right: 10px;
-    left: 1600px;
-    bottom:300px;
-    filter: drop-shadow(3px 15px 5px #000);
-}
-
-.personage_flami{
-    position: relative;
-    z-index: 10;
-    left: -350px;
-}
-
-.personage_flami{
-    animation-name: flami;
-    animation-duration: 2s;
-}
-
-@keyframes flami {
-    0%{
-        transform: translateY(50%);
-    }
-}
-
-.personage_frog{
-    animation-name: frog;
-    animation-duration: 2s;
-}
-
-@keyframes frog {
-    25% {
-        transform: rotate(70deg);
-    }
-    50%{
-        transform: translateX(50%);
-    }
-}
-
-
-.welcome_title{
-    width: 300px;
-    vertical-align: center;
-    background-color: black;
-    position: relative;
-    z-index: 12;
-   top: 150px;
-
-}
-.welcome{
-    position: relative;
-    z-index: 12;
-    color:#ffffff;
-    text-align: center;
-    padding: 50px 0 50px;
-    text-shadow: 8px 3px 11px #5645ff, 0 0 2em #ff0066;}
