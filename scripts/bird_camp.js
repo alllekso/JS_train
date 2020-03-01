@@ -1,38 +1,36 @@
+"use strict";
 let choose_input;
 let user_side;
+let black_side_img = document.querySelector(".black_side");
+let white_side_img = document.querySelector(".white_side");
+let black_side_music = document.getElementById("audio1");
+let white_side_music = document.getElementById("audio1");
+let music = black_side_music;
+
 
 function get_user_choose() {
     choose_input = document.querySelector(".choose_side_input").value;
-    alert(choose_input);
-    // calculate_user_side();
-    // show_user_side();
-
+    calculate_user_side();
 }
 
-// function calculate_user_side() {
-//     user_side = (choose_input % 2 > 0) ? "Black" : "White";
-// }
-
-// function calculate_user_side() {
-//     if (choose_input % 2 > 0){
-//         user_side = "White"
-//     }
-//     else user_side = "Black"
-// }
-//
-//
-// function show_user_side() {
-//     if (user_side === "Black") {
-//         document.querySelector(".black_side").hidden = false;
-//     } else {
-//         document.querySelector(".white_side").hidden = false;
-//
-//     }
-// }
+function calculate_user_side() {
+    if (+choose_input % 2 > 0) {
+        user_side = "White";
+        music = white_side_music;
+        white_side_img.hidden = false;
+        black_side_img.hidden = true;
+    }
+    else {
+        user_side = "Black";
+        music = black_side_music;
+        black_side_img.hidden = false;
+        white_side_img.hidden = true;
+    }
+}
 
 
+function play() {
+    music.play();
+}
 
-let audio = document.getElementById("mySoundClip");
- document.querySelector(".black_side").mouseenter(function() {
-    audio.play();
- });
+black_side_img.addEventListener("mousemove", play);

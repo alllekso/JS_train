@@ -4,30 +4,35 @@
     <meta charset="UTF-8">
     <title>Bird camp!</title>
     <link rel="stylesheet" href="style/flamingo_school_style.css">
-    <script src=scripts/bird_camp.js></script>
+
 
 
 </head>
 
 <body>
+
+<audio src="audio/les_den.mp3" id="audio" ></audio>
+
+
 <h1 class="title_question">Select your side. Enter any number!</h1>
 
 
 <form class="form_question">
     <label for="1"></label>
-    <input type="text" class="choose_side_input" placeholder="Enter your number" id="1">
+    <input type="number" class="choose_side_input" placeholder="Enter your number" id="1">
+<!--    <button class="choose_side_button" onclick="get_user_choose()">This is my side!</button>-->
+    <input type = "button" value="This is my side!" class="choose_side_button" onclick="get_user_choose()"></input>
 
-    <button class="choose_side_button" onclick="get_user_choose()">This is my side!</button>
 </form>
 
 
-<img src="img/black_chicken.png"  class="black_side" alt="black_chicken">
-<img src="img/white_chicken.png"  class="white_side" alt="white_chicken">
+<div>
+    <img src="img/black_chicken.png"  class="black_side" alt="black_chicken" hidden>
+    <img src="img/white_chicken.png"  class="white_side" alt="white_chicken" hidden>
+</div>
 
-<audio>
-    <source src="audi/les_veter_noch.mp3" id="mySoundClip">
-    <source src="audi/les_den.mp3">
-</audio>
+
 </body>
 
 </html>
+<script src=scripts/bird_camp.js></script>

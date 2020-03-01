@@ -98,3 +98,4 @@ function wait(func, element_id, time) {
     }, time);
 }
 
+
