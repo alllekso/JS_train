@@ -1,5 +1,6 @@
 "use strict";
 let choose_input;
+let choose_side_button = document.querySelector(".choose_side_button");
 let user_side;
 let black_side_img = document.querySelector(".black_side");
 let white_side_img = document.querySelector(".white_side");
@@ -33,5 +34,10 @@ function play() {
     music.play();
 }
 
+function stop_playing() {
+    music.pause();
+}
+
 black_side_img.addEventListener("mousemove", play);
 white_side_img.addEventListener("mousemove", play);
+choose_side_button.addEventListener("click", stop_playing);
