@@ -36,6 +36,7 @@ function play() {
 
 function stop_playing() {
     music.pause();
+    music.currentTime = 0;
 }
 
 black_side_img.addEventListener("mousemove", play);
