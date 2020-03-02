@@ -3,16 +3,18 @@ body {
     padding: 0;
     margin: 0;
     font-family: sans-serif;
+
 }
 
 .title_question {
     padding-top: 30px;
     text-align: center;
     color: white;
-    text-shadow: 8px 3px 11px #5645ff, 0 0 2em #ff0066;;
+    text-shadow: 8px 3px 11px #5645ff, 0 0 2em #ff0066;
 }
 
 .black_side{
+    float:left;
     filter: drop-shadow(0 4px 6px #5645ff);
 }
 
@@ -61,4 +63,43 @@ body {
 .choose_side_input {
     padding: 3px 5px;
     color: darkgray;
+}
+
+.content {
+    color: white;
+    width: 500px;
+    line-height: 2.5;
+    float: right;
+    margin: 0 auto;
+    padding:150px;
+    text-shadow: 8px 3px 11px #5645ff, 0 0 2em #ff0066;
+
+}
+
+.content {
+    animation-name: emerging;
+    animation-duration: 2s;
+}
+
+@keyframes emerging {
+  0% {
+        transform: translateX(70%);
+    }
+}
+
+.background-img {
+    position: absolute;
+    z-index: 0;
+    left: -150px;
+}
+
+.section {
+    display: flex;
+}
+
+.section-footer{
+    width: 100%;
+    /*position: fixed;*/
+    background-image: url(JS_train/img/footer.png);
+    /*background-repeat: repeat*/
 }
