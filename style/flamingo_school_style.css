@@ -87,19 +87,26 @@ body {
     }
 }
 
-.background-img {
-    position: absolute;
-    z-index: 0;
-    left: -150px;
-}
-
 .section {
     display: flex;
 }
 
-.section-footer{
-    width: 100%;
-    /*position: fixed;*/
-    background-image: url("../img/footer.png");
-    /*background-repeat: repeat*/
+footer{
+    display: flex;
+    overflow: hidden;
 }
+.background-img {
+    position: relative;
+    z-index: 0;
+}
+
+.copyright {
+    color: #ffffff;
+    font-size: 12px;
+    position: absolute;
+    z-index: 100;
+    left: 800px;
+    bottom: -750px;
+    padding: 50px;
+}
+
