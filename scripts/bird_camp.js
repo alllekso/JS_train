@@ -34,3 +34,4 @@ function play() {
 }
 
 black_side_img.addEventListener("mousemove", play);
+white_side_img.addEventListener("mousemove", play);
