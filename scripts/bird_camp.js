@@ -3,9 +3,9 @@ let choose_input;
 let user_side;
 let black_side_img = document.querySelector(".black_side");
 let white_side_img = document.querySelector(".white_side");
-let black_side_music = document.getElementById("audio1");
-let white_side_music = document.getElementById("audio1");
-let music = black_side_music;
+let black_side_music = document.getElementById("audio");
+let white_side_music = document.getElementById("audio2");
+let music = black_side_music || white_side_music;
 
 
 function get_user_choose() {
