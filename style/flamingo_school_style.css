@@ -91,22 +91,17 @@ body {
     display: flex;
 }
 
-footer{
-    display: flex;
-    overflow: hidden;
-}
-.background-img {
-    position: relative;
-    z-index: 0;
+
+.section-footer {
+    width: 100%;
+    height: 384px;
+    background-image: url("../img/footer.png");
 }
 
-.copyright {
+.copyright{
     color: #ffffff;
     font-size: 12px;
-    position: absolute;
-    z-index: 100;
-    left: 800px;
-    bottom: -750px;
-    padding: 50px;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 330px;
 }
-
