@@ -4,41 +4,59 @@
     <meta charset="UTF-8">
     <title>Login</title>
     <link rel="stylesheet" href="style/Styles.css">
-    <link rel="shortcut icon" href="img/favicon.ico" >
+    <link rel="shortcut icon" href="img/favicon.ico">
 
 </head>
 <script src=scripts/login.js>script</script>
 <body>
+<button class="sign_up_button">
+    Sign up
+</button>
+
+
 <section>
-<button class="start_login_button" onclick="show_login_form()" id="start_login_button">Login</button>
+    <button class="start_login_button" onclick="show_login_form()" id="start_login_button">Login</button>
 
 
-<!-- форма ввода -->
-<form class="login_form" id="login_form_is_hidden" hidden>
+    <!-- форма ввода -->
+    <form class="login_form" id="login_form_is_hidden" hidden>
 
-    <div>
-        <img class="img" src="img/love.gif" alt="flamingo_img">
-        <h1 class="question_text_style" id="hello_message"></h1>
-    </div>
-
-
-    <div class="login_group" hidden>
-        <label for="name" class="form_label">Name</label><br>
-        <input id="name" class="form_input" placeholder="Your name" value="Lex" required>
-        <div class="error_message" id="name_notifications_field"> </div>
-    </div>
+        <div>
+            <img class="img" src="img/love.gif" alt="flamingo_img">
+            <h1 class="question_text_style" id="hello_message"></h1>
+        </div>
 
 
-    <div class="pass_group" hidden>
-        <label for="pass" class="form_label">Password</label>
-        <input type="password" name="pass" id = 'pass' class="form_input" placeholder="Enter your password" required>
-        <div class="error_message" id="pass_notifications_field"> </div>
-    </div>
+        <div class="login_group" hidden>
+            <label for="name" class="form_label">Name</label><br>
+            <input id="name" class="form_input" placeholder="Your name" value="Lex" required>
+            <div class="error_message" id="name_notifications_field"></div>
+        </div>
 
-    <input type="button" class="form_button" onclick="login()" value="Login" hidden>
-</form>
-<!--<button onclick="wait()">Test action</button>-->
+
+        <div class="pass_group" hidden>
+            <label for="pass" class="form_label">Password</label>
+            <input type="password" name="pass" id='pass' class="form_input" placeholder="Enter your password" required>
+            <div class="error_message" id="pass_notifications_field"></div>
+        </div>
+
+        <input type="button" class="form_button" onclick="login()" value="Login" hidden>
+    </form>
+    <!--<button onclick="wait()">Test action</button>-->
 </section>
+
+
+<form class="support_form">
+    <p style="color: white">Need help? - don`t give up!<br>
+        Go on to pass the purple tutorial ⇩
+    </p>
+    <button>
+        <a href="Page_Lend.html">
+            Call feathered helper!
+        </a>
+    </button>
+</form>
+
 
 </body>
 

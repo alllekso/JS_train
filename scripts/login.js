@@ -9,21 +9,19 @@ function login() {
         check_user_name();
     }
     else {
-        check_pass();
+        check_pass_owned_by_user();
     }
 
 }
 
-function show_login_login_form(){
+function show_login_form(){
     document.getElementById("login_form_is_hidden").hidden = false;
     document.getElementById("start_login_button").hidden = true;
-    setTimeout(ask_name, 1500);
+    setTimeout(ask_name, 100);
 }
 
 function ask_name() {
     document.getElementById("hello_message").innerHTML = flamingo_pick_up;
-    // document.getElementsByClassName('login_group')[0].hidden = false;
-    // document.getElementsByClassName('form_button')[0].hidden = false;
     document.querySelector(".login_group").hidden = false;
     document.querySelector(".form_button").hidden = false;
 }
@@ -53,24 +51,26 @@ function check_user_name() {
 
 }
 
-function check_pass() {
+function check_pass_owned_by_user() {
     user_pass = document.getElementById("pass").value;
     notifications_field = document.getElementById("pass_notifications_field");
+    validate(user_pass);
     notifications_field.hidden = false;
+
+
+}
+
+function validate(user_pass) {
+
+    notifications_field.innerHTML = "";
+    const value = "";
+    console.log(value.match(/\s+/));
     if (user_pass === "") {
         notifications_field.innerHTML = "Pass field is required!";
         notifications_field.className = 'error_message'
     }
-    if (validate(user_pass)) {
 
-    }
-}
-
-function validate(user_pass) {
-    notifications_field.innerHTML = "";
-    const value = "";
-    console.log(value.match(/\s+/));
-    if (user_pass.length < 3) {
+    else if (user_pass.length < 3) {
         notifications_field.innerHTML = "Min pass length = 3";
         notifications_field.className = 'error_message'
     }
