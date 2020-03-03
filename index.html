@@ -7,40 +7,48 @@
     <link rel="shortcut icon" href="img/favicon.ico">
 
 </head>
-<script src=scripts/login.js>script</script>
+<script src=scripts/next_step.js>script</script>
 <body>
-<button class="sign_up_button">
+<button class="sign_up_button" onclick="sign_up()">
     Sign up
 </button>
 
 
 <section>
-    <button class="start_login_button" onclick="show_login_form()" id="start_login_button">Login</button>
+    <button class="start_login_button" onclick="login()">Login</button>
 
 
     <!-- форма ввода -->
-    <form class="login_form" id="login_form_is_hidden" hidden>
+    <form class="sign_up_login_form" hidden>
 
         <div>
             <img class="img" src="img/love.gif" alt="flamingo_img">
-            <h1 class="question_text_style" id="hello_message"></h1>
+            <h1 class="chicken_message"></h1>
         </div>
 
 
-        <div class="login_group" hidden>
-            <label for="name" class="form_label">Name</label><br>
+        <div class="nickname_group">
+            <label for="name" class="input_field_name">Name</label><br>
             <input id="name" class="form_input" placeholder="Your name" value="Lex" required>
             <div class="error_message" id="name_notifications_field"></div>
         </div>
 
 
         <div class="pass_group" hidden>
-            <label for="pass" class="form_label">Password</label>
-            <input type="password" name="pass" id='pass' class="form_input" placeholder="Enter your password" required>
+            <label for="pass" class="input_field_name">Password</label>
+            <input type="password" name="pass"  placeholder="Enter your password" class="form_input" id='pass' required>
             <div class="error_message" id="pass_notifications_field"></div>
         </div>
 
-        <input type="button" class="form_button" onclick="login()" value="Login" hidden>
+        <div class="confirm_pass_group" hidden>
+            <label for="pass" class="input_field_name">Password</label>
+            <input type="password" name="pass"  placeholder="Confirm your password" class="form_input" required>
+            <div class="error_message" id="confirm_pass_notifications_field"></div>
+        </div>
+
+
+
+        <input type="button" class="confirm_button" onclick="next_step()" value="" hidden>
     </form>
     <!--<button onclick="wait()">Test action</button>-->
 </section>

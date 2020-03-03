@@ -27,7 +27,7 @@ section {
     background-color: #5645ff;
 }
 
-.login_form{
+.sign_up_login_form{
     min-height: 250px;
     width: 300px;
     padding: 5px  30px 30px;
@@ -44,7 +44,7 @@ section {
     box-shadow: 0 4px 16px #5645ff;
 }
 
-.question_text_style{
+.chicken_message{
     text-align: center;
     color: #ffffff;
     padding-top: 150px;
@@ -52,16 +52,16 @@ section {
     z-index: 10;
 
 }
-.login_group{
+.nickname_group{
      font-size: 16px;
      padding: 30px 0 20px;
  }
-.pass_group{
+.pass_group .confirm_pass_group{
     font-size: 16px;
     padding-bottom:20px;
 }
 
-.form_label{
+.input_field_name{
     color: darkgray;
     margin-bottom: 5px;
  }
@@ -75,7 +75,7 @@ section {
 
  }
 
- .form_button{
+ .confirm_button{
      padding: 10px 20px;
      border: none;
      border-radius: 5px;
@@ -86,7 +86,7 @@ section {
      font-weight: bold;
  }
 
-.form_button:hover{
+.confirm_button:hover{
      background-color: #ff0066;
  }
 
