@@ -11,6 +11,7 @@ section{
     justify-content: center;
     padding-top:30px;
 }
+/*Стили кнопок */
 
 .start_login_button, .sign_up_button, .button_support_form{
     width: 300px;
@@ -30,6 +31,8 @@ section{
 .start_login_button:hover, .sign_up_button:hover, .button_support_form:hover{
     background-color: #5645ff;
 }
+
+
 
 .sign_up_login_form{
     width: 300px;
@@ -111,7 +114,7 @@ section{
 .support_form p {
     color: #ffffff;
     text-align: center;
-    margin-top:400px;
+    margin:350px 0 10px;
     text-shadow: 8px 3px 11px #5645ff, 0 0 2em #ff0066;
 }
 
@@ -132,6 +135,5 @@ a{
     left: 0;
     bottom: 0;
     width: 100%;
-    text-align: center;
 }
 
