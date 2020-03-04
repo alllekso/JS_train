@@ -7,15 +7,20 @@
     <link rel="shortcut icon" href="img/favicon.ico">
 
 </head>
-<script src=scripts/next_step.js>script</script>
+<script src=scripts/next_step.js></script>
 <body>
-<button class="sign_up_button" onclick="sign_up()">
-    Sign up
-</button>
+
+
 
 
 <section>
+
     <button class="start_login_button" onclick="login()">Login</button>
+    <div class="inner_sign_up_button">
+        <button class="sign_up_button" onclick="sign_up()">Sign up</button>
+    </div>
+
+
 
 
     <!-- форма ввода -->
@@ -42,7 +47,9 @@
 
         <div class="confirm_pass_group" hidden>
             <label for="pass" class="input_field_name">Password</label>
-            <input type="password" name="pass"  placeholder="Confirm your password" class="form_input" required>
+            <label>
+                <input type="password" name="pass"  placeholder="Confirm your password" class="form_input" required>
+            </label>
             <div class="error_message" id="confirm_pass_notifications_field"></div>
         </div>
 

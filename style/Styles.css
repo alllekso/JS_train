@@ -4,13 +4,22 @@ body {
     margin: 0;
     font-family: sans-serif;
 }
-section {
+section{
     display: flex;
     justify-content: center;
     padding-top:30px;
 }
 
-.start_login_button{
+/*.inner_sign_up_button{*/
+/*    float: right;*/
+/*    right: 0;*/
+/*    left: 550px;*/
+/*    position: relative;*/
+/*}*/
+
+
+.start_login_button, .sign_up_button{
+    flex-wrap: nowrap;
     width: 300px;
     padding: 40px 20px;
     border: none;
@@ -22,8 +31,16 @@ section {
     font-family: sans-serif;
     font-weight: bold;
     transition: 0.3s;
+    /*margin-right: 350px;*/
 }
-.start_login_button:hover{
+
+.sign_up_button{
+    padding:30px;
+    width: 200px;
+}
+
+
+.start_login_button:hover, .sign_up_button:hover{
     background-color: #5645ff;
 }
 
