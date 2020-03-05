@@ -5,7 +5,10 @@ body {
     font-family: sans-serif;
     background-image: url("../img/header .png");
     background-repeat: no-repeat;
+
 }
+
+
 section{
     display: flex;
     justify-content: center;
@@ -32,7 +35,12 @@ section{
     background-color: #5645ff;
 }
 
-
+.button_support_form{
+    width: 200px;
+    padding: 20px 10px;
+    color: #fff;
+    background-color: #65a225;
+}
 
 .sign_up_login_form{
     width: 300px;
