@@ -149,7 +149,7 @@ aside{
     height: 500px;
     background-color: #3f3363;
     border-radius: 5px;
-    margin-left: 20px;
+    /*margin-left: 20px;*/
 }
 
 
@@ -182,9 +182,17 @@ aside{
     outline:none;
 }
 
+.title-container-friends{
+    display: flex;
+}
+.title-container-friends h3, p {
+    color: #d0d0d0;
+    padding:10px 20px 0;
+    margin: 0;
+}
+
 
 .friends{
-    /*height: 100px;*/
     background-color: rgba(208, 208, 208, 0.4);
     margin: 10px;
     border-radius: 10px;
@@ -206,4 +214,14 @@ aside{
 .avatar-friends{
     width: 15%;
     justify-content: center;
+}
+.bottom_link a{
+    color: #d0d0d0;
+    text-decoration: none;
+    list-style: none;
+    font-size: 14px;
+}
+.bottom_link{
+    float: right;
+    margin: 0 20px;
 }
