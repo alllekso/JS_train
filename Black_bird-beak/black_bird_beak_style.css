@@ -7,9 +7,9 @@ body {
 
 .bg {
     /*background-image: url("../Black_bird-beak/img/navbar.png");*/
-    width: 100%;
-    height: 224px;
-    background-repeat: no-repeat;
+    /*width: 100%;*/
+    /*height: 224px;*/
+    /*background-repeat: no-repeat;*/
 }
 
 .navbar {
@@ -19,8 +19,12 @@ body {
     justify-content: center;
 
 }
+
 .brand{
     padding: 20px 50px;
+    width: 125px;
+    height: 30px;
+
 }
 .ava{
     padding: 20px 30px;
@@ -55,7 +59,7 @@ aside{
     position: relative;
 
 }
-
+/*Ховер для загрузки обложки*/
 .adding-cover img{
     position: absolute;
     right: 0;
@@ -70,7 +74,7 @@ aside{
     content: attr(data-title);
     position: absolute;
     right: 0;
-    padding:60px 50px;
+    padding:3px 10px;
     z-index: 1;
     background: rgba(255, 210, 219, 0.9);
     font-family: sans-serif;
@@ -90,32 +94,31 @@ aside{
     padding: 20px;
     border-radius: 100px;
     position:absolute;
-    z-index: 0; transition: 10s linear;
+    z-index: 0;
 }
-
+/*Ховер под аватаркой */
 .your-ava:hover::after {
     content: attr(data-title);
     position: absolute;
-    left: 80px;
-    top:140px;
+    left: 5px;
+    top:5px;
     padding: 20px;
     border-radius: 100px;
-    z-index: 1;
+    z-index: 10;
     background: rgba(255, 210, 219, 0.9);
     font-family: sans-serif;
     color: black;
     font-size: 12px;
-
-
 }
-
 
 .adding-cover2 img{
     position: absolute;
-    left: 80px;
-    top:140px;
-    z-index: 10;
+    left: 5px;
+    top:5px;
+    z-index: 1;
     padding: 10px;
+    border: 1px solid #d0d0d0;
+    border-radius: 100px;
 }
 
 .user_name{
