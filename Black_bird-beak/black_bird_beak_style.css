@@ -16,12 +16,12 @@ body {
    display:flex;
     width: 1080px;
     margin: 0 auto;
-    justify-content: center;
+    justify-content: space-between;
 
 }
 
 .brand{
-    padding: 20px 50px;
+    padding: 20px;
     width: 125px;
     height: 30px;
 
@@ -63,8 +63,9 @@ aside{
 .adding-cover img{
     position: absolute;
     right: 0;
+    top: 10px;
     z-index: 10;
-    margin: 20px 20px;
+    margin: 20px;
     background-color: #ffd2db;
     border-radius: 10px;
     padding: 10px;
@@ -74,15 +75,15 @@ aside{
     content: attr(data-title);
     position: absolute;
     right: 0;
-    padding:3px 10px;
+    padding:5px 10px;
     z-index: 1;
     background: rgba(255, 210, 219, 0.9);
     font-family: sans-serif;
     color: black;
     font-size: 12px;
-    border-radius: 5px;
+    border-radius: 50px;
 }
-.your-ava{
+.avatar{
     height: 200px;
     width: 200px;
 }
@@ -97,28 +98,26 @@ aside{
     z-index: 0;
 }
 /*Ховер под аватаркой */
-.your-ava:hover::after {
+.adding-cover2 img{
+    position: absolute;
+    left: 10px;
+    top:10px;
+    width: 3%;
+
+}
+
+.adding-cover2:hover::after {
     content: attr(data-title);
     position: absolute;
-    left: 5px;
-    top:5px;
-    padding: 20px;
-    border-radius: 100px;
+    left:50px;
+    top:150px;
+    padding: 10px;
+    border-radius: 50px;
     z-index: 10;
     background: rgba(255, 210, 219, 0.9);
     font-family: sans-serif;
     color: black;
     font-size: 12px;
-}
-
-.adding-cover2 img{
-    position: absolute;
-    left: 5px;
-    top:5px;
-    z-index: 1;
-    padding: 10px;
-    border: 1px solid #d0d0d0;
-    border-radius: 100px;
 }
 
 .user_name{
@@ -181,5 +180,30 @@ aside{
     padding:0 30px;
     border: none;
     outline:none;
+}
 
+
+.friends{
+    /*height: 100px;*/
+    background-color: rgba(208, 208, 208, 0.4);
+    margin: 10px;
+    border-radius: 10px;
+    display: flex;
+}
+
+.avatar-friends img{
+    width: 80px;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+.avatar-friends p{
+    margin: 0 ;
+    text-align: center;
+    padding:0 0  10px;
+    color: #ffffff;
+}
+.avatar-friends{
+    width: 15%;
+    justify-content: center;
 }
