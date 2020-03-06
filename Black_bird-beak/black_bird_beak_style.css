@@ -4,12 +4,10 @@ body {
     margin: 0;
     font-family: sans-serif;
 }
-
-.bg {
-    /*background-image: url("../Black_bird-beak/img/navbar.png");*/
-    /*width: 100%;*/
-    /*height: 224px;*/
-    /*background-repeat: no-repeat;*/
+a {
+    color: #d0d0d0;
+    text-decoration: none;
+    list-style: none;
 }
 
 .navbar {
@@ -17,14 +15,12 @@ body {
     width: 1080px;
     margin: 0 auto;
     justify-content: space-between;
-
 }
 
 .brand{
     padding: 20px;
     width: 125px;
     height: 30px;
-
 }
 .ava{
     padding: 20px 30px;
@@ -35,10 +31,8 @@ body {
 }
 
 .items_navbar a{
-    list-style: none;
     color: white;
     margin: 0 30px;
-    text-decoration: none;
 }
 
 aside{
@@ -46,7 +40,6 @@ aside{
     width: 1080px;
     margin: 0 auto;
     justify-content: center;
-
 }
 
 .fon{
@@ -57,7 +50,6 @@ aside{
     margin-bottom: 20px;
     border-radius: 5px;
     position: relative;
-
 }
 /*Ховер для загрузки обложки*/
 .adding-cover img{
@@ -126,13 +118,11 @@ aside{
 }
 
 /*контент сайта*/
-
 .sidebar {
     display:flex;
     width: 1080px;
     margin: 0 auto;
     justify-content: center;
-
 }
 
 .widget {
@@ -143,21 +133,17 @@ aside{
     margin-right: 20px;
 }
 
-
 .container {
     width: 760px;
     height: 500px;
-    background-color: #3f3363;
+    background-color: #190b28;
     border-radius: 5px;
-    /*margin-left: 20px;*/
 }
-
 
 .title_style {
     text-align: center;
     color: #d0d0d0;
     padding-top: 20px;
-
 }
 
 .list {
@@ -191,7 +177,6 @@ aside{
     margin: 0;
 }
 
-
 .friends{
     background-color: rgba(208, 208, 208, 0.4);
     margin: 10px;
@@ -216,12 +201,61 @@ aside{
     justify-content: center;
 }
 .bottom_link a{
-    color: #d0d0d0;
-    text-decoration: none;
-    list-style: none;
     font-size: 14px;
 }
 .bottom_link{
     float: right;
     margin: 0 20px;
+}
+
+.publication_header{
+    background-color: rgba(126, 0, 110, 0.89);
+    margin: 35px 10px 0;
+    border-radius: 10px 10px 0 0;
+}
+.icon{
+    height: 30px;
+    padding: 0 5px;
+}
+
+.publication{
+    background-color: rgb(208, 208, 208);
+    margin:0 10px;
+    border-radius:0 0 10px 10px;
+    height: 100px;
+}
+
+.yourava_mini img{
+    height: 40px;
+    margin: 5px;
+    border-radius: 100px;
+
+}
+.publication_input{
+    background-color: #d0d0d0;
+    outline: none;
+    border: none;
+    padding:18px 15px 0;
+}
+
+.yourava_mini  {
+    display: flex;
+}
+
+.publication-button__send{
+    float: right;
+    margin: 0 20px;
+}
+
+#publication-button_icon{
+    background-color: #7E006E;
+    border-radius: 100px;
+
+}
+
+.publication-button{
+
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
 }
