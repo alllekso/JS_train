@@ -14,27 +14,20 @@ let confirm_password = false;
 function sign_up() {
     action = "sign up";
     greetings_message = "Hello there! <br> Introduce yourself =]";
-    show_sign_up_form();
+    show_auth_form();
 }
 
 function login() {
     action = "login";
     greetings_message = "Who's there?";
-    show_login_form();
+    show_auth_form();
 }
 
-function show_sign_up_form() {
-    document.querySelector(".start_login_button").hidden = true;
-    document.querySelector(".sign_up_button").hidden = true;
-    document.querySelector(".sign_up_login_form").hidden = false;
-    setTimeout(ask_nickname, 100);
-    ask_nickname();
-}
+function show_auth_form() {
 
-function show_login_form() {
-    document.querySelector(".start_login_button").hidden = true;
-    document.querySelector(".sign_up_button").hidden = true;
-    document.querySelector(".sign_up_login_form").hidden = false;
+    fields_displaying_manager("class", "start_login_button", true);
+    fields_displaying_manager("class", "sign_up_button", true);
+    fields_displaying_manager("class", "sign_up_login_form", false);
     setTimeout(ask_nickname, 100);
 }
 
@@ -182,13 +175,14 @@ function save_user() {
 function get_selector_value(type, selector) {
     let selector_value;
     switch (type) {
-        case "class": selector_value = document.querySelector(selector);
+        case "class": selector_value = document.querySelector("." + selector);
         break;
         case "id": selector_value = document.getElementById(selector);
+        break;
     }
     return selector_value;
 }
 
-function fields_displaying_manager(type, selector, condition) {
-    get_selector_value(type, selector).hidden = condition;
+function fields_displaying_manager(type, selector, hidden) {
+    get_selector_value(type, selector).hidden = hidden;
 }
