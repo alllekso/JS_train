@@ -2,8 +2,11 @@
 let action;
 let user_nickname;
 let user_pass;
+
+let pass_field;
 let notifications_field;
 let greetings_message;
+
 let name = false;
 let password = false;
 let confirm_password = false;
@@ -30,6 +33,7 @@ function show_sign_up_form() {
 
 function show_login_form() {
     document.querySelector(".start_login_button").hidden = true;
+    document.querySelector(".sign_up_button").hidden = true;
     document.querySelector(".sign_up_login_form").hidden = false;
     setTimeout(ask_nickname, 100);
 }
@@ -48,12 +52,11 @@ function name_validation() {
 function check_user_nickname() {
     user_nickname = document.getElementById("name").value;
     notifications_field = document.getElementById("name_notifications_field");
+    pass_field = document.querySelector('.pass_group');
     notifications_field.hidden = false;
 
-    user_nickname = true; //??
-
-    if (user_nickname === 'Admin' || user_nickname === 'Lex') {
-        document.getElementsByClassName('pass_group')[0].hidden = false;
+    if (user_nickname === 'Lex') {
+        pass_field.hidden = false;
         notifications_field.innerHTML = 'Name accepted';
         notifications_field.className = 'success_message';
         wait(hide_message, "name_notifications_field", 2000);
@@ -72,8 +75,10 @@ function check_user_nickname() {
 }
 
 
-function ask_pass() {
+function ask_confirm_pass() {
+    document.querySelector(".confirm_pass_group").hidden = false;
     document.querySelector(".confirm_pass_notifications_field").hidden = false;
+    next_step();
 }
 
 function check_pass() {
@@ -81,15 +86,14 @@ function check_pass() {
     notifications_field = document.getElementById("pass_notifications_field");
     notifications_field.hidden = false;
     pass_validation(user_pass);
-    if (action === "login"){
-        //TO DO login-pass__matching
-    }
 }
 
 function check_confirm_pass() {
-    user_pass = document.getElementById("pass").value;
+    confirm_password = document.getElementById("confirm_pass").value;
     notifications_field = document.getElementById("confirm_pass_notifications_field");
     notifications_field.hidden = false;
+    pass_validation(confirm_password);
+    password = confirm_password ? save_user() : notifications_field.innerHTML = "Confirm password does not match the Password";
 }
 
 function pass_validation(user_pass) {
@@ -109,6 +113,9 @@ function pass_validation(user_pass) {
     } else if (+(user_pass)) {
         notifications_field.innerHTML = "Pass can not contain digits only";
         notifications_field.className = 'error_message'
+    } else {
+        password = true;
+        next_step();
     }
 }
 
@@ -134,17 +141,23 @@ function next_login_step() {
 
 function next_sign_up_step() {
     if (name === false) {
-        name_validation();
+        name === true ? pass_field.hidden = true : check_user_nickname();
     } else if (password === false) {
-        check_pass();
-    } else if (confirm_password === false) {
+        // password === true ? check_confirm_pass() : check_pass();
 
+        if (password === true) {
+            ask_confirm_pass();
+        } else check_pass();
+
+    } else if (confirm_password === false) {
+        check_confirm_pass();
     }
 }
 
 function hide_message(element_id) {
 
-    document.getElementById(element_id).hidden = true;
+    // document.getElementById(element_id).hidden = true;
+    fields_displaying_manager("id", element_id, true);
 }
 
 function wait(func, element_id, time) {
@@ -153,4 +166,29 @@ function wait(func, element_id, time) {
     }, time);
 }
 
+function create_user() {
+    function new_user() {
+        this.nickname = user_nickname;
+        this.password = user_pass;
+    }
 
+    return new_user();
+}
+
+function save_user() {
+    alert("saved");
+}
+
+function get_selector_value(type, selector) {
+    let selector_value;
+    switch (type) {
+        case "class": selector_value = document.querySelector(selector);
+        break;
+        case "id": selector_value = document.getElementById(selector);
+    }
+    return selector_value;
+}
+
+function fields_displaying_manager(type, selector, condition) {
+    get_selector_value(type, selector).hidden = condition;
+}

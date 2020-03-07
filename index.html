@@ -13,13 +13,8 @@
 
 
 <section>
-
     <button class="start_login_button" onclick="login()">Login</button>
-
     <button class="sign_up_button" onclick="sign_up()">Sign up</button>
-
-
-
     <!-- форма ввода -->
     <form class="sign_up_login_form" hidden>
 
@@ -45,7 +40,7 @@
         <div class="confirm_pass_group" hidden>
             <label for="pass" class="input_field_name">Password</label>
             <label>
-                <input type="password" name="pass"  placeholder="Confirm your password" class="form_input" required>
+                <input type="password" name="pass"  placeholder="Confirm your password" class="form_input" id = "confirm_pass" required>
             </label>
             <div class="error_message" id="confirm_pass_notifications_field"></div>
         </div>
