@@ -10,7 +10,7 @@ let confirm_password = false;
 
 function sign_up() {
     action = "sign up";
-    greetings_message = "Hello there! <br> Introduce yourself =]";
+    greetings_message = "Hello there! <br> Introduce yourself 😁";
     show_sign_up_form();
 }
 

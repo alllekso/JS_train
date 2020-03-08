@@ -46,7 +46,7 @@ section{
 }
 
 .button_support_form{
-    width: 120px;
+    width: 250px;
     padding: 10px 10px;
     color: #fff;
     background-color: #65a225;
@@ -136,6 +136,11 @@ section{
     color: chocolate;
 }
 
+.support_form{
+    float: right;
+    right: 20px;
+    margin:0 30px;
+}
 .support_form p {
     color: #ffffff;
     text-align: center;
