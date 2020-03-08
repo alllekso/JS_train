@@ -12,7 +12,10 @@ body {
 section{
     display: flex;
     justify-content: center;
-    padding-top:30px;
+    left: 5%;
+    top: 30px;
+    position: relative;
+    z-index: 10;
 }
 /*Стили кнопок */
 
@@ -31,13 +34,20 @@ section{
     margin: 30px;
 }
 
+.sign_up_button{
+    width: 150px;
+    padding: 10px 5px;
+    background-color: #ff602e;
+    position: relative;
+    z-index: 0;
+}
 .start_login_button:hover, .sign_up_button:hover, .button_support_form:hover{
     background-color: #5645ff;
 }
 
 .button_support_form{
-    width: 200px;
-    padding: 20px 10px;
+    width: 120px;
+    padding: 10px 10px;
     color: #fff;
     background-color: #65a225;
 }
@@ -50,6 +60,13 @@ section{
     background-image:linear-gradient(to top right, #291152 0%, #5a004a 70%, #ff0066 100%);
     font-family: sans-serif;
 }
+
+.button_layout__sign-up button{
+    float: right;
+    top: 80px;
+}
+
+
 .img{
     width: 300px;
     border-radius: 10px;
