@@ -54,7 +54,7 @@ function next_login_step() {
     if (name_check === false) {
         check_name();
     } else if (pass_check === false) {
-        check_pass();
+        ask_pass();
     } else alert("you logged in");
 
 }
@@ -65,10 +65,9 @@ function next_sign_up_step() {
     } else if (pass_check === false) {
         check_pass();
 
-    } else if (confirm_password === false) {
+    }
+    else if (confirm_pass_check === false) {
         check_confirm_pass();
-    } else if (confirm_pass_check === true){
-        save_user();
     }
 }
 
@@ -81,11 +80,11 @@ function name_validation() {
     set_hidden("id", "name_notifications_field", false);
 
     if (user_nickname === 'Lex') {
-        set_hidden("class", "pass_group", false);
         send_notification("id", "name_notifications_field", "Name accepted");
         set_class_name("id", "name_notifications_field", "success_message");
         wait(hide_message, "name_notifications_field", 2000);
         name_check = true;
+        set_hidden("class", "pass_group", false);
 
     } else if (user_nickname === "") {
         notifications_field.innerHTML = 'At first enter your name';
@@ -96,11 +95,8 @@ function name_validation() {
     }
 }
 
-
-function ask_confirm_pass() {
-    document.querySelector(".confirm_pass_group").hidden = false;
-    document.querySelector(".confirm_pass_notifications_field").hidden = false;
-    next_step();
+function ask_pass() {
+    check_pass();
 }
 
 function check_pass() {
@@ -110,14 +106,19 @@ function check_pass() {
     pass_validation(password);
 }
 
+function ask_confirm_pass() {
+    document.querySelector(".confirm_pass_group").hidden = false;
+}
+
 function check_confirm_pass() {
     confirm_password = document.getElementById("confirm_pass").value;
+    pass_validation(confirm_password);
+
     notifications_field = document.getElementById("confirm_pass_notifications_field");
     notifications_field.hidden = false;
-    pass_validation(confirm_password);
     if (password === confirm_password){
         confirm_pass_check = true;
-        next_sign_up_step();
+        save_user();
     }
     else {
         notifications_field.innerHTML = "Confirm password does not match the Password";
@@ -143,7 +144,12 @@ function pass_validation() {
         notifications_field.className = 'error_message'
     } else {
         pass_check = true;
-        next_step();
+        switch (action) {
+            case "sign up": ask_confirm_pass();
+            break;
+            case "login": next_step();
+            break;
+        }
     }
 }
 
@@ -177,29 +183,3 @@ function get_element(type, selector) {
     return element;
 }
 
-function get_value(type, selector) {
-    get_element(type, selector).value;
-}
-
-function set_hidden(type, selector, hidden) {
-    get_element(type, selector).hidden = hidden;
-}
-
-function send_notification(type, selector, message) {
-    get_element(type, selector, message).innerHTML = message;
-}
-
-function set_class_name(type, selector, class_name) {
-    get_element(type, selector, class_name).className = class_name;
-
-}
-
-function hide_message(element_id) {
-    set_hidden("id", element_id, true);
-}
-
-function wait(func, element_id, time) {
-    setTimeout(function () {
-        func(element_id);
-    }, time);
-}
