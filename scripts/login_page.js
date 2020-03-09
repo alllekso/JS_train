@@ -36,7 +36,7 @@ function show_auth_form() {
 
 function ask_nickname() {
     set_hidden("class", "confirm_button", false);
-    send_notification("chicken_message", greetings_message);
+    send_notification("class","chicken_message", greetings_message);
 }
 
 function next_step() {
@@ -53,9 +53,10 @@ function next_step() {
 function next_login_step() {
     if (name_check === false) {
         check_name();
-    } else {
+    } else if (pass_check === false) {
         check_pass();
-    }
+    } else alert("you logged in");
+
 }
 
 function next_sign_up_step() {
@@ -123,39 +124,27 @@ function check_confirm_pass() {
     }
 }
 
-function pass_validation(user_pass) {
+function pass_validation() {
 
     notifications_field.innerHTML = "";
-    const value = "";
-    console.log(value.match(/\s+/));
-    if (user_pass === "") {
+    // const password = "";
+    // console.log(password.match(/\s+/));
+    if (password === "") {
         notifications_field.innerHTML = "Pass field is required!";
         notifications_field.className = 'error_message'
-    } else if (user_pass.length < 3) {
+    } else if (password.length < 3) {
         notifications_field.innerHTML = "Min pass length = 3";
         notifications_field.className = 'error_message'
-    } else if (user_pass.length > 11) {
+    } else if (password.length > 11) {
         notifications_field.innerHTML = "Max pass length = 10";
         notifications_field.className = 'error_message'
-    } else if (+(user_pass)) {
+    } else if (+(password)) {
         notifications_field.innerHTML = "Pass can not contain digits only";
         notifications_field.className = 'error_message'
     } else {
         pass_check = true;
-        set_hidden("class", "confirm_pass_group", false);
         next_step();
     }
-}
-
-
-function hide_message(element_id) {
-    set_hidden("id", element_id, true);
-}
-
-function wait(func, element_id, time) {
-    setTimeout(function () {
-        func(element_id);
-    }, time);
 }
 
 function create_user() {
@@ -170,6 +159,7 @@ function create_user() {
 function save_user() {
     alert("saved");
 }
+
 
 function get_element(type, selector) {
     let element;
@@ -202,4 +192,14 @@ function send_notification(type, selector, message) {
 function set_class_name(type, selector, class_name) {
     get_element(type, selector, class_name).className = class_name;
 
+}
+
+function hide_message(element_id) {
+    set_hidden("id", element_id, true);
+}
+
+function wait(func, element_id, time) {
+    setTimeout(function () {
+        func(element_id);
+    }, time);
 }
