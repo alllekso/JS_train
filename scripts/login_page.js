@@ -16,7 +16,7 @@ let confirm_pass_check = false;
 
 function sign_up() {
     action = "sign up";
-    greetings_message = "Hello there! <br> Introduce yourself =]";
+    greetings_message = "Hello there! <br> Introduce yourself 😄";
     show_auth_form();
 }
 
