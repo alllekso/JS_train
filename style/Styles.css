@@ -102,6 +102,7 @@ section{
      font-family: sans-serif;
      border: none;
      border-radius: 5px;
+     margin: 5px 0 0;
  }
 
  .confirm_button{
