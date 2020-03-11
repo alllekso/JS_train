@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <script src="test.js"></script>
+    <link rel="stylesheet" href="style-calculator.css">
+</head>
+<body>
+<label>
+    <input placeholder="First number" id="first_digit">
+    <input placeholder="Second number" id="second_digit">
+</label>
+<div>
+    <p>Result:</p>
+    <p id="result"></p>
+</div>
+<button type="button" id="sum" onclick="sum()">Sum</button>
+<button type="button" id="subtraction" onclick="subtraction()">Subtraction</button>
+</body>
+
+<div class="wrapper">
+    <form class="style-form">
+        <div id="calc">
+            <label>
+            <textarea id=input-val>0</textarea>
+            </label>
+        </div>
+        <div class="group-button">
+        <button type="button">1</button>
+        <button type="button">2</button>
+        <button type="button">3</button>
+        <button type="button">4</button>
+        <button type="button">5</button>
+        <br><button type="button">6</button>
+        <button type="button">7</button>
+        <button type="button">8</button>
+        <button type="button">9</button>
+        <button type="button">0</button>
+        </div>
+        <div class="group-icon">
+           <button type="button">c</button>
+            <button type="button">−</button>
+            <button type="button">+</button>
+            <button type="button">×</button>
+            <button type="button">÷</button>
+            <br><button type="button" id="sum-button">Result</button>
+        </div>
+
+    </form>
+
+</div>
+
+
+
+
+</html>
