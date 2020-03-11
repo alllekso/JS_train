@@ -23,30 +23,33 @@
 
 <div class="wrapper">
     <form class="style-form">
-        <div id="calc">
+        <div>
             <label>
-            <textarea id=input-val>0</textarea>
+            <input type="text" id="display" placeholder="0">
             </label>
         </div>
+        <div class="group-icon">
+            <button type="button" id="zero" onclick="clean()">c</button>
+            <button type="button" onclick="add('-')">−</button>
+            <button type="button" onclick="add('+')">+</button>
+            <button type="button" onclick="add('×')">×</button>
+            <button type="button" onclick="add('÷')">÷</button>
+        </div>
+
         <div class="group-button">
-        <button type="button" id="button-namb1" onclick="keys1()">1</button>
-        <button type="button" id="button-namb2" onclick="keys2()">2</button>
-        <button type="button" id="button-namb3" onclick="keys3()">3</button>
-        <button type="button" id="button-namb4" onclick="keys4()">4</button>
-        <button type="button" id="button-namb5" onclick="keys5()">5</button>
-        <br><button type="button" id="button-namb6">6</button>
-        <button type="button" id="button-namb7">7</button>
-        <button type="button" id="button-namb8">8</button>
-        <button type="button" id="button-namb9">9</button>
-        <button type="button" id="button-namb0">0</button>
+        <button type="button"  onclick="add('1')">1</button>
+        <button type="button"  onclick="add('2')">2</button>
+        <button type="button"  onclick="add('3')">3</button>
+        <button type="button"  onclick="add('4')">4</button>
+        <button type="button"  onclick="add('5')">5</button>
+        <br><button type="button"  onclick="add('6')">6</button>
+        <button type="button"  onclick="add('7')">7</button>
+        <button type="button"  onclick="add('8')">8</button>
+        <button type="button"  onclick="add('9')">9</button>
+        <button type="button"  onclick="add('0')">0</button>
         </div>
         <div class="group-icon">
-           <button type="button">c</button>
-            <button type="button">−</button>
-            <button type="button">+</button>
-            <button type="button">×</button>
-            <button type="button">÷</button>
-            <br><button type="button" id="sum-button">Result</button>
+            <br><button type="button" id="sum-button" onclick="cal()">Result</button>
         </div>
 
     </form>

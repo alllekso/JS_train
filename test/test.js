@@ -17,14 +17,43 @@ function subtraction() {
 }
 
 
+// мой калькулятор
+
+function add(count) {
+    document.getElementById("display").value+=count;
+}
+
+function cal() {
+    document.getElementById("display")
+        .value= eval(document.getElementById("display").value);
+
+}
+function clean() {
+   result = 0;
+   document.getElementById("display").innerHTML = result;
+}
+
+
+
+
+
+
+
+
+
 
 function keys1() {
-    from_get = document.getElementById("button-namb1").innerHTML;
-    alert(from_get);
+    numd = +document.getElementById("btn-namb1").innerHTML;
+    document.getElementById("input-val").innerHTML = result;
 }
+
+
+
+
+
 function keys2() {
     from_get = document.getElementById("button-namb2").innerHTML;
-    alert(from_get);
+alert(from_get);
 }
 function keys3() {
     from_get = document.getElementById("button-namb3").innerHTML;
