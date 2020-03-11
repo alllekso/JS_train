@@ -1,7 +1,13 @@
 let first_digit;
 let second_digit;
 let result;
+let display;
 
+function connect_display() {
+    display = document.getElementById("display");
+    display.value = "";
+
+}
 function sum() {
     first_digit = +document.getElementById("first_digit").value;
     second_digit = +document.getElementById("second_digit").value;
@@ -15,28 +21,30 @@ function subtraction() {
     result = first_digit - second_digit;
     document.getElementById("result").innerHTML = result;
 }
-
-
 //  калькулятор
 
-function keys1() {
-   let digit = +document.getElementById("1").innerHTML;
-    document.getElementById("display").innerHTML = result;
+function key1() {
+display.value = display.value + "1";
+display.innerHTML = display.value;
 }
 
-function keys2() {
-    let digit = +document.getElementById("2").innerHTML;
-    document.getElementById("display").innerHTML = result;
+function key2() {
+display.value = display.value + "2";
+display.innerHTML = display.value;
 }
-function keys3() {
-    let digit = +document.getElementById("3").innerHTML;
-    document.getElementById("display").innerHTML = result;
+
+function sum2() {
+    result = +display.value;
+    ask_next_digit();
+
 }
-function keys4() {
-    let digit = +document.getElementById("4").innerHTML;
-    document.getElementById("display").innerHTML = result;
+
+function ask_next_digit() {
+    display.value = ""
 }
-function keys5() {
-    let digit = +document.getElementById("5").innerHTML;
-    document.getElementById("display").innerHTML = result;
+
+function calculate_result() {
+    result = +result + +display.value;
+    display.innerHTML = result;
 }
+
