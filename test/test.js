@@ -25,7 +25,7 @@ function add(count) {
 
 function cal() {
     document.getElementById("display")
-        .value= eval(document.getElementById("display").value);
+        .value= eval(document.getElementById("display").value);//eval меняет строку на значение
 
 }
 function clean() {
