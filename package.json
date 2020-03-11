@@ -1,0 +1,22 @@
+{
+  "name": "js_train",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alllekso/JS_train.git"
+  },
+  "author": "allekso",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alllekso/JS_train/issues"
+  },
+  "homepage": "https://github.com/alllekso/JS_train#readme",
+  "dependencies": {
+    "redux": "^4.0.5"
+  }
+}

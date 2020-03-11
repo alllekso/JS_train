@@ -1,3 +1,26 @@
+import { createStore } from 'redux'
+let store = createStore(auth_function);
+
+
+
+function auth_function(message = "", action) {
+    switch (action.type) {
+        case 'login':
+            return message = "Hello 1"
+        case 'sign_up':
+            return message= "Hello 2"
+        case 'logout':
+            return message = "Hello 3"
+        default:
+            return message
+    }
+}
+
+
+
+
+
+
 let action;
 let user_nickname;
 let password;
@@ -12,7 +35,6 @@ let pass_check = false;
 let confirm_pass_check = false;
 
 
-//
 
 function sign_up() {
     action = "sign up";
@@ -42,9 +64,11 @@ function next_step() {
     switch (action) {
         case "login":
             next_login_step();
+            store.dispatch({ type: 'login' });
             break;
         case  "sign up":
             next_sign_up_step();
+            store.dispatch({ type: 'sign_up' });
             break;
     }
 }
