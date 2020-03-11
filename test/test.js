@@ -17,53 +17,26 @@ function subtraction() {
 }
 
 
-// мой калькулятор
-
-function add(count) {
-    document.getElementById("display").value+=count;
-}
-
-function cal() {
-    document.getElementById("display")
-        .value= eval(document.getElementById("display").value);//eval меняет строку на значение
-
-}
-function clean() {
-   result = 0;
-   document.getElementById("display").innerHTML = result;
-}
-
-
-
-
-
-
-
-
-
+//  калькулятор
 
 function keys1() {
-    numd = +document.getElementById("btn-namb1").innerHTML;
-    document.getElementById("input-val").innerHTML = result;
+   let digit = +document.getElementById("1").innerHTML;
+    document.getElementById("display").innerHTML = result;
 }
-
-
-
-
 
 function keys2() {
-    from_get = document.getElementById("button-namb2").innerHTML;
-alert(from_get);
+    let digit = +document.getElementById("2").innerHTML;
+    document.getElementById("display").innerHTML = result;
 }
 function keys3() {
-    from_get = document.getElementById("button-namb3").innerHTML;
-    alert(from_get);
+    let digit = +document.getElementById("3").innerHTML;
+    document.getElementById("display").innerHTML = result;
 }
 function keys4() {
-    from_get = document.getElementById("button-namb4").innerHTML;
-    alert(from_get);
+    let digit = +document.getElementById("4").innerHTML;
+    document.getElementById("display").innerHTML = result;
 }
 function keys5() {
-    from_get = document.getElementById("button-namb5").innerHTML;
-    alert(from_get);
+    let digit = +document.getElementById("5").innerHTML;
+    document.getElementById("display").innerHTML = result;
 }

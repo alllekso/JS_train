@@ -23,30 +23,29 @@
 
 <div class="wrapper">
     <form class="style-form">
-        <div>
-            <label>
-            <input type="text" id="display" placeholder="0">
-            </label>
-        </div>
+
+        <div id="display"></div>
+
+
         <div class="group-icon">
             <button type="button" id="zero" onclick="clean()">c</button>
-            <button type="button" onclick="add('-')">−</button>
-            <button type="button" onclick="add('+')">+</button>
-            <button type="button" onclick="add('×')">×</button>
-            <button type="button" onclick="add('÷')">÷</button>
+            <button type="button" onclick="minus()">−</button>
+            <button type="button" onclick="plus()">+</button>
+            <button type="button" onclick="multiply()">×</button>
+            <button type="button" onclick="division()">÷</button>
         </div>
 
         <div class="group-button">
-        <button type="button"  onclick="add('1')">1</button>
-        <button type="button"  onclick="add('2')">2</button>
-        <button type="button"  onclick="add('3')">3</button>
-        <button type="button"  onclick="add('4')">4</button>
-        <button type="button"  onclick="add('5')">5</button>
-        <br><button type="button"  onclick="add('6')">6</button>
-        <button type="button"  onclick="add('7')">7</button>
-        <button type="button"  onclick="add('8')">8</button>
-        <button type="button"  onclick="add('9')">9</button>
-        <button type="button"  onclick="add('0')">0</button>
+        <button type="button" id="1" onclick=keys1()>1</button>
+        <button type="button" id="2" onclick=keys2()>2</button>
+        <button type="button" id="3" onclick=keys3()>3</button>
+        <button type="button" id="4" onclick=keys4()>4</button>
+        <button type="button" id="5" onclick=keys5()>5</button>
+        <br><button type="button" id="6" onclick=keys6()>6</button>
+        <button type="button"  onclick=keys1()>7</button>
+        <button type="button"  onclick=keys1()>8</button>
+        <button type="button"  onclick=keys1()>9</button>
+        <button type="button"  onclick=keys1()>0</button>
         </div>
         <div class="group-icon">
             <br><button type="button" id="sum-button" onclick="cal()">Result</button>
