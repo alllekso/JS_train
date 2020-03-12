@@ -9,13 +9,25 @@ p, h1, h2, h3, a, ul{
 .wrapper{
     display: flex;
     justify-content: center;
+    margin-top:160px;
+
 
 }
-
+#history {
+    background-color: #70a7ff;
+    border-radius: 20px;
+    color: white;
+    width: 300px;
+    height:300px;
+    margin:0  20px;
+    padding: 20px;
+    font-size: 24px;
+}
 .style-form{
     background-image: url("../test/img/pattern.jpg");
     padding: 20px;
     border-radius: 10px;
+    margin:0  20px;
 }
 
 #display{
