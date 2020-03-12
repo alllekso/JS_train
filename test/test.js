@@ -2,6 +2,7 @@ let first_digit;
 let second_digit;
 let result;
 let display;
+let action;
 
 function connect_display() {
     display = document.getElementById("display");
@@ -68,6 +69,7 @@ function key0() {
 // Арефметические знаки
 
 function sum2() {
+    action = "sum";
     result = +display.value;
     ask_next_digit();
 
@@ -90,7 +92,7 @@ function minus() {
 }
 
 function multiply() {
-    result =   display * result;
+    result =   +display.value;
     ask_next_digit();
 
 }
@@ -99,7 +101,10 @@ function multiply() {
 
 
 function calculate_result() {
-    result = +result + +display.value;
-    display.innerHTML = result;
+    switch (action) {
+        case "sum":
+            result = +result + +display.value;
+            display.innerHTML = result;
+    }
 }
 
