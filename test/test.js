@@ -1,110 +1,116 @@
 let first_digit;
 let second_digit;
 let result;
-let display;
+let display_element;
 let action;
-let meaning;
+let display_value;
+let input;
+let display_history;
+let history_log = "";
 
 
 
 
 function connect_display() {
-    display = document.getElementById("display");
-    display.value = meaning = "";
+    display_element = document.getElementById("display");
+    display_history = document.getElementById("history");
+    display_value = display_element.value = "";
+    input = display_value;
+
 }
 
-function sum() {
-    first_digit = +document.getElementById("first_digit").value;
-    second_digit = +document.getElementById("second_digit").value;
-    result = first_digit + second_digit;
-    console.log(result);
-}
-
-function subtraction() {
-    first_digit = +document.getElementById("first_digit").value;
-    second_digit = +document.getElementById("second_digit").value;
-    result = first_digit - second_digit;
-    document.getElementById("result").innerHTML = result;
-}
 //  калькулятор
 
+function sum() {
+    action = "sum";
+    result = input;
+    save_history(input, " + ");
+
+    input = "";
+
+}
+
+function save_history(log_data_1, log_data_2) {
+    history_log = history_log + log_data_1 + log_data_2;
+    display_history.innerHTML = history_log;
+
+}
+
 function key1() {
-    meaning = meaning + "1";
-    display.innerHTML = meaning;
+    input = Number(input + "1");
+    display_element.innerHTML = input;
+
+
 }
 function key2() {
-    meaning =  meaning + "2";
-    display.innerHTML =  meaning;
+    input = input + "2";
+    display_element.innerHTML = input;
+
 }
 function key3() {
-    meaning =  meaning + "3";
-    display.innerHTML =  meaning;
+    input =  input + "3";
+    display_element.innerHTML =  input;
 }
 function key4() {
-    display.value =  meaning + "4";
-    display.innerHTML =  meaning;
+    display_element.value =  input + "4";
+    display_element.innerHTML =  input;
 }
 function key5() {
-    meaning =  meaning + "5";
-    display.innerHTML = meaning;
+    input =  input + "5";
+    display_element.innerHTML = input;
 }
 function key6() {
-    meaning =  meaning + "6";
-    display.innerHTML =  meaning;
+    input =  input + "6";
+    display_element.innerHTML =  input;
 }
 function key7() {
-    meaning =  meaning + "7";
-    display.innerHTML =  meaning;
+    input =  input + "7";
+    display_element.innerHTML =  input;
 }
 function key8() {
-    meaning =  meaning + "8";
-    display.innerHTML =  meaning;
+    input =  input + "8";
+    display_element.innerHTML =  input;
 }
 function key9() {
-    meaning =  meaning + "9";
-    display.innerHTML =  meaning;
+    input =  input + "9";
+    display_element.innerHTML =  input;
 }
 function key0() {
-    meaning =  meaning + "0";
-    display.innerHTML =  meaning;
+    input =  input + "0";
+    display_element.innerHTML =  input;
 }
 
 
 // Арефметические знаки
 
-function sum2() {
-    action = "sum";
-    result = meaning;
-    ask_next_digit();
 
-}
 
 function ask_next_digit() {
-    meaning = ""
+    input = ""
 }
 
 
 
 function clean() {
-    result = meaning = "";
-    display.innerHTML = result;
+    result = input = "";
+    display_element.innerHTML = result;
 }
 
 function minus() {
     action = "minus";
-    result = meaning;
+    result = input;
     ask_next_digit();
 }
 
 function multiply() {
     action = "multiply";
-    result = meaning;
+    result = input;
     ask_next_digit();
 }
 
 function division() {
     action = "division";
-    result = meaning;
+    result = input;
     ask_next_digit();
 }
 
@@ -113,23 +119,26 @@ function division() {
 function calculate_result() {
     switch (action) {
         case "sum":
-            result = +result + +meaning;
-            display.innerHTML = result;
+            result = result + input;
+            display_element.innerHTML = result;
+            save_history(input, " = ");
+            save_history(result, "");
+
             break;
 
         case "minus":
-            result = result - meaning;
-            display.innerHTML = result;
+            result = result - input;
+            display_element.innerHTML = result;
             break;
 
         case "multiply":
-            result = result * meaning;
-            display.innerHTML = result;
+            result = result * input;
+            display_element.innerHTML = result;
             break;
 
         case "division":
-            result = result / meaning;
-            display.innerHTML = result;
+            result = result / input;
+            display_element.innerHTML = result;
             break;
 
 
