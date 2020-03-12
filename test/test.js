@@ -3,12 +3,16 @@ let second_digit;
 let result;
 let display;
 let action;
+let meaning;
+
+
+
 
 function connect_display() {
     display = document.getElementById("display");
-    display.value = "";
-
+    display.value = meaning = "";
 }
+
 function sum() {
     first_digit = +document.getElementById("first_digit").value;
     second_digit = +document.getElementById("second_digit").value;
@@ -25,44 +29,44 @@ function subtraction() {
 //  калькулятор
 
 function key1() {
-display.value = display.value + "1";
-display.innerHTML = display.value;
+    meaning = meaning + "1";
+    display.innerHTML = meaning;
 }
 function key2() {
-display.value = display.value + "2";
-display.innerHTML = display.value;
+    meaning =  meaning + "2";
+    display.innerHTML =  meaning;
 }
 function key3() {
-    display.value = display.value + "3";
-    display.innerHTML = display.value;
+    meaning =  meaning + "3";
+    display.innerHTML =  meaning;
 }
 function key4() {
-    display.value = display.value + "4";
-    display.innerHTML = display.value;
+    display.value =  meaning + "4";
+    display.innerHTML =  meaning;
 }
 function key5() {
-    display.value = display.value + "5";
-    display.innerHTML = display.value;
+    meaning =  meaning + "5";
+    display.innerHTML = meaning;
 }
 function key6() {
-    display.value = display.value + "6";
-    display.innerHTML = display.value;
+    meaning =  meaning + "6";
+    display.innerHTML =  meaning;
 }
 function key7() {
-    display.value = display.value + "7";
-    display.innerHTML = display.value;
+    meaning =  meaning + "7";
+    display.innerHTML =  meaning;
 }
 function key8() {
-    display.value = display.value + "8";
-    display.innerHTML = display.value;
+    meaning =  meaning + "8";
+    display.innerHTML =  meaning;
 }
 function key9() {
-    display.value = display.value + "9";
-    display.innerHTML = display.value;
+    meaning =  meaning + "9";
+    display.innerHTML =  meaning;
 }
 function key0() {
-    display.value = display.value + "0";
-    display.innerHTML = display.value;
+    meaning =  meaning + "0";
+    display.innerHTML =  meaning;
 }
 
 
@@ -70,41 +74,67 @@ function key0() {
 
 function sum2() {
     action = "sum";
-    result = +display.value;
+    result = meaning;
     ask_next_digit();
 
 }
 
 function ask_next_digit() {
-    display.value = ""
+    meaning = ""
 }
 
 
 
 function clean() {
-    result = display.value= "";
+    result = meaning = "";
     display.innerHTML = result;
 }
 
 function minus() {
-    result = -display.value;
-    ask_next_digit(); //когда одно значение больше другого и значение больше идет первым пишет (-1)
+    action = "minus";
+    result = meaning;
+    ask_next_digit();
 }
 
 function multiply() {
-    result =   +display.value;
+    action = "multiply";
+    result = meaning;
     ask_next_digit();
-
 }
 
+function division() {
+    action = "division";
+    result = meaning;
+    ask_next_digit();
+}
 
 
 
 function calculate_result() {
     switch (action) {
         case "sum":
-            result = +result + +display.value;
+            result = +result + +meaning;
             display.innerHTML = result;
+            break;
+
+        case "minus":
+            result = result - meaning;
+            display.innerHTML = result;
+            break;
+
+        case "multiply":
+            result = result * meaning;
+            display.innerHTML = result;
+            break;
+
+        case "division":
+            result = result / meaning;
+            display.innerHTML = result;
+            break;
+
+
     }
+
+
 }
 
