@@ -67,6 +67,16 @@ function key0() {
 
 
 // Арефметические знаки
+function save_history(log_data_1, log_data_2) {
+    history_log = history_log + log_data_1 + log_data_2;
+    display_history.innerHTML = history_log;
+}
+
+
+function clean() {
+    result = input = "";
+    display_element.innerHTML = result;
+}
 
 function sum() {
     action = "sum";
@@ -75,48 +85,33 @@ function sum() {
     input = "";
 }
 
+
 function multiply() {
     action = "multiply";
     result = input;
-    save_history(input, " + ");
+    save_history(input, " × ");
     input = "";
 }
-function save_history(log_data_1, log_data_2) {
-    history_log = history_log + log_data_1 + log_data_2;
-    display_history.innerHTML = history_log;
-}
-
-function ask_next_digit() {
-    input = ""
-}
-
-function clean() {
-    result = input = "";
-    display_element.innerHTML = result;
-}
-
 function minus() {
     action = "minus";
     result = input;
-    save_history(input, " + ");
+    save_history(input, " - ");
     input = "";
 }
 
 function division() {
     action = "division";
     result = input;
-    save_history(input, " + ");
+    save_history(input, " ÷");
     input = "";
 }
 
 
 function save() {
+    display_element.innerHTML = result;
     save_history(input, " = ");
     save_history(result, "<br>");
 }
-
-
-
 
 
 
@@ -124,25 +119,21 @@ function calculate_result() {
     switch (action) {
         case "sum":
             result = result + input;
-            display_element.innerHTML = result;
             save();
             break;
 
         case "minus":
             result = result - input;
-            display_element.innerHTML = result;
            save();
             break;
 
         case "multiply":
             result = result * input;
-            display_element.innerHTML = result;
            save();
             break;
 
         case "division":
             result = result / input;
-            display_element.innerHTML = result;
             save();
             break;
     }
