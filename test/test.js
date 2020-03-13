@@ -1,5 +1,4 @@
-let first_digit;
-let second_digit;
+
 let result;
 let display_element;
 let action;
@@ -108,7 +107,7 @@ function division() {
 
 
 function save() {
-    display_element.innerHTML = result;
+    display_element.innerHTML = result ;
     save_history(input, " = ");
     save_history(result, "<br>");
 }
