@@ -110,35 +110,40 @@ function division() {
 }
 
 
+function save() {
+    save_history(input, " = ");
+    save_history(result, "<br>");
+}
+
+
+
+
+
 
 function calculate_result() {
     switch (action) {
         case "sum":
             result = result + input;
             display_element.innerHTML = result;
-            save_history(input, " = ");
-            save_history(result, "<br>");
+            save();
             break;
 
         case "minus":
             result = result - input;
             display_element.innerHTML = result;
-            save_history(input, " = ");
-            save_history(result, "<br>");
+           save();
             break;
 
         case "multiply":
             result = result * input;
             display_element.innerHTML = result;
-            save_history(input, " = ");
-            save_history(result, "<br>");
+           save();
             break;
 
         case "division":
             result = result / input;
             display_element.innerHTML = result;
-            save_history(input, " = ");
-            save_history(result, "<br>");
+            save();
             break;
     }
 
