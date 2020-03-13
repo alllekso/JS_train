@@ -75,6 +75,12 @@ function sum() {
     input = "";
 }
 
+function multiply() {
+    action = "multiply";
+    result = input;
+    save_history(input, " + ");
+    input = "";
+}
 function save_history(log_data_1, log_data_2) {
     history_log = history_log + log_data_1 + log_data_2;
     display_history.innerHTML = history_log;
@@ -89,24 +95,18 @@ function clean() {
     display_element.innerHTML = result;
 }
 
-
-
 function minus() {
     action = "minus";
     result = input;
-    ask_next_digit();
-}
-
-function multiply() {
-    action = "multiply";
-    result = input;
-    ask_next_digit();
+    save_history(input, " + ");
+    input = "";
 }
 
 function division() {
     action = "division";
     result = input;
-    ask_next_digit();
+    save_history(input, " + ");
+    input = "";
 }
 
 
@@ -117,29 +117,28 @@ function calculate_result() {
             result = result + input;
             display_element.innerHTML = result;
             save_history(input, " = ");
-            save_history(result, "");
-
+            save_history(result, "<br>");
             break;
 
         case "minus":
             result = result - input;
             display_element.innerHTML = result;
             save_history(input, " = ");
-            save_history(result, "");
+            save_history(result, "<br>");
             break;
 
         case "multiply":
             result = result * input;
             display_element.innerHTML = result;
             save_history(input, " = ");
-            save_history(result, "");
+            save_history(result, "<br>");
             break;
 
         case "division":
             result = result / input;
             display_element.innerHTML = result;
             save_history(input, " = ");
-            save_history(result, "");
+            save_history(result, "<br>");
             break;
     }
 
