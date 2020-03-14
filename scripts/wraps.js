@@ -10,6 +10,9 @@ function get_element(type, selector) {
         case  "var":
             element = selector;
             break;
+        default:
+            element = document.querySelector("." + selector);
+            break;
     }
     return element;
 }
