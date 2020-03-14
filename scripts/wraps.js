@@ -33,8 +33,12 @@ function send_notification(type, selector, message) {
     get_element(type, selector, message).innerHTML = message;
 }
 
-function set_class_name(type, selector, class_name) {
-    get_element(type, selector, class_name).className = class_name;
+function validation_message(message) {
+    notifications_field.innerHTML = message;
+}
+
+function set_element_style(type = "var", selector, style) {
+    get_element(type, selector, style).className = style;
 
 }
 
