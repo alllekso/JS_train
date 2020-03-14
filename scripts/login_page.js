@@ -1,20 +1,3 @@
-const store = Redux.createStore(auth_function)
-
-
-function auth_function(message = "", action) {
-    switch (action.type) {
-        case 'login':
-            return greetings_message = "Hello 1"
-        case 'sign_up':
-            return greetings_message= "Hello there! <br> Introduce yourself 😄";
-        case 'logout':
-            return greetings_message = "Hello 3"
-        default:
-            return ""
-    }
-}
-
-
 let action;
 let user_nickname;
 let password;
@@ -29,19 +12,21 @@ let pass_check = false;
 let confirm_pass_check = false;
 
 
+//
 
 function sign_up() {
-    store.dispatch({type: "sign_up"})
+    action = "sign up";
+    greetings_message = "Hello there! <br> Introduce yourself 😄";
     show_auth_form();
 }
 
 function login() {
-    store.dispatch({ type: 'login' });
-    setTimeout(() => show_auth_form(), 2000);
+    action = "login";
+    greetings_message = "Who's there?";
+    show_auth_form();
 }
 
 function show_auth_form() {
-    store.dispatch({type: "sign_up"});
     hide_element("class", "start_login_button");
     hide_element("class", "sign_up_button");
     show_element("class", "sign_up_login_form");
@@ -57,11 +42,9 @@ function next_step() {
     switch (action) {
         case "login":
             next_login_step();
-            store.dispatch({ type: 'login' });
             break;
         case  "sign up":
             next_sign_up_step();
-            store.dispatch({ type: 'sign_up' });
             break;
     }
 }
