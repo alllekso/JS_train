@@ -1,1 +1,2 @@
-let hello;
+
+let user_list = [];

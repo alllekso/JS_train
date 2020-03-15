@@ -158,16 +158,31 @@ function pass_validation_message(password) {
 
 }
 
+
+
+
 function create_user() {
-    function new_user() {
-        this.nickname = user_nickname;
-        this.password = password;
-    }
-    return new_user();
+    let user = {
+        id: 1,
+        name: user_nickname,
+        pass: password,
+    };
+
+    console.log("saved");
+    return user;
 }
 
-function save_user() {
-    alert("saved");
+function save_to_database() {
+
 }
+
+
+function save_user() {
+    console.log("saved");
+}
+
+//https://learn.javascript.ru/indexeddb
+let openRequest = indexedDB.open("users_DB", 1);
+
 
 

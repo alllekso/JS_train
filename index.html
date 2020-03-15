@@ -7,9 +7,9 @@
     <link rel="shortcut icon" href="img/favicon.ico">
 
 </head>
-<script src=scripts/login_page.js></script>
+<script src=scripts/auth_page.js></script>
 <script src=scripts/wraps.js></script>
-
+<script src=scripts/data_base.js></script>
 <body>
 
     <div class="button_layout__sign-up">
@@ -53,6 +53,7 @@
 
         <input type="button" class="confirm_button" onclick="next_step()" value="Confirm">
     </form>
+        <button id="save_user" onclick="OpenIDB()">save user</button>
     <!--<button onclick="wait()">Test action</button>-->
 </section>
 
