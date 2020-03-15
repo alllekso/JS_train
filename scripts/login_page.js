@@ -88,11 +88,8 @@ function check_pass() {
     password = get_value("pass");
     notifications_field = get_element("pass_notifications_field");
     notifications_field.innerHTML = "";
-    // confirm_button = get_element("confirm_button", "class");
-    // confirm_button.onclick = next_step();
     pass_validation_message(password);
     return password_validation(password);
-
 }
 
 function ask_confirm_pass() {
@@ -101,9 +98,9 @@ function ask_confirm_pass() {
 
 function check_confirm_pass() {
     ask_confirm_pass();
+    confirm_password = get_value("confirm_pass");
     notifications_field = get_element("confirm_pass_notifications_field");
     notifications_field.innerHTML = "";
-
     compare_passwords();
     pass_validation_message(confirm_password);
     return password_validation(confirm_password);
@@ -166,7 +163,6 @@ function create_user() {
         this.nickname = user_nickname;
         this.password = password;
     }
-
     return new_user();
 }
 
