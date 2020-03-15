@@ -1,4 +1,4 @@
-function get_element(type, selector) {
+function get_element(selector, type = "id") {
     let element;
     switch (type) {
         case "class":
@@ -17,33 +17,33 @@ function get_element(type, selector) {
     return element;
 }
 
-function get_value(type, selector) {
-    return get_element(type, selector).value;
+function get_value(selector, type) {
+    return get_element(selector, type).value;
 }
 
-function show_element(type, selector) {
-    get_element(type, selector).hidden = false;
+function show_element(selector, type) {
+    get_element(selector, type).hidden = false;
 }
 
-function hide_element(type, selector) {
-    get_element(type, selector).hidden = true;
+function hide_element(selector, type) {
+    get_element(selector, type).hidden = true;
 }
 
-function send_notification(type, selector, message) {
-    get_element(type, selector, message).innerHTML = message;
+function send_notification(selector, message, type) {
+    get_element(selector, message, type).innerHTML = message;
 }
 
 function validation_message(message) {
     notifications_field.innerHTML = message;
 }
 
-function set_element_style(type = "var", selector, style) {
-    get_element(type, selector, style).className = style;
+function set_element_style(selector, style, type,) {
+    get_element(selector, type).className = style;
 
 }
 
 function hide_message(element_id) {
-    hide_element("id", element_id, true);
+    hide_element(element_id, "id", true);
 }
 
 function wait(func, element_id, time) {

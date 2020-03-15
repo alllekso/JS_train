@@ -18,15 +18,14 @@ function login() {
 }
 
 function show_auth_form() {
-    hide_element("class", "start_login_button");
-    hide_element("class", "sign_up_button");
-    show_element("class", "sign_up_login_form");
-    setTimeout(ask_nickname, 0);
+    hide_element("start_login_button", "class");
+    hide_element("sign_up_button", "class");
+    show_element("sign_up_login_form", "class");
+    setTimeout(ask_nickname, 50);
 }
 
 function ask_nickname() {
-    show_element("class", "confirm_button");
-    send_notification("class", "chicken_message", greetings_message);
+    send_notification("chicken_message", greetings_message, "class");
 }
 
 function next_step() {
@@ -59,26 +58,24 @@ function next_sign_up_step() {
 }
 
 function check_name() {
-    user_nickname = get_value("id", "name");
-    notifications_field = get_element("id", "name_notifications_field");
-    show_element("id", "name_notifications_field");
-    set_element_style("id", "name_notifications_field", "error_message");
+    user_nickname = get_value("name");
+    notifications_field = get_element("name_notifications_field");
+    show_element("name_notifications_field");
     name_validation_message();
     return name_validation();
 }
 
 function name_validation() {
     if (user_nickname === 'Lex') {
-        show_element("class", "pass_group");
+        show_element("pass_group", "class");
         return true;
-    }
-    else return false;
+    } else return false;
 }
 
 function name_validation_message() {
     if (user_nickname === 'Lex') {
         validation_message("Name accepted");
-        set_element_style("id", "name_notifications_field", "success_message");
+        set_element_style("name_notifications_field", "success_message");
         wait(hide_message, "name_notifications_field", 2000);
     } else if (user_nickname === "") {
         validation_message("At first enter your name");
@@ -87,32 +84,35 @@ function name_validation_message() {
     }
 }
 
-function check_pass(password) {
-    password = get_value("id", "pass");
-    notifications_field = get_element("id", "pass_notifications_field");
+function check_pass() {
+    password = get_value("pass");
+    notifications_field = get_element("pass_notifications_field");
     notifications_field.innerHTML = "";
+    // confirm_button = get_element("confirm_button", "class");
+    // confirm_button.onclick = next_step();
     pass_validation_message(password);
     return password_validation(password);
+
 }
 
 function ask_confirm_pass() {
-    show_element("class", "confirm_pass_group");
+    show_element("confirm_pass_group", "class");
 }
 
 function check_confirm_pass() {
-    notifications_field = get_element("id", "confirm_pass_notifications_field");
+    ask_confirm_pass();
+    notifications_field = get_element("confirm_pass_notifications_field");
     notifications_field.innerHTML = "";
-    password = get_value("id", "pass");
-    confirm_password = get_value("id", "confirm_pass");
+
     compare_passwords();
     pass_validation_message(confirm_password);
     return password_validation(confirm_password);
 }
 
 function compare_passwords() {
-    notifications_field = get_element("id", "confirm_pass_notifications_field");
+    notifications_field = get_element("confirm_pass_notifications_field");
     if (password === confirm_password) {
-        notifications_field.innerHTML = "";
+        validation_message("");
         return true;
     } else {
         validation_message("Confirm password does not match the Password");
@@ -120,26 +120,21 @@ function compare_passwords() {
 }
 
 function final_sign_up_check() {
-    user_nickname = get_value("id", "name");
-    password = get_value("id", "pass");
-    confirm_password = get_value("id", "confirm_pass");
     if (
         name_validation() === true
         && password_validation(password) === true
         && password_validation(confirm_password) === true
-        && password === confirm_password
+        && compare_passwords() === true
     ) {
         save_user();
     } else {
-        next_step();
         // alert("some error");
     }
 }
 
 function password_validation(password) {
-    // const password = "";
     // console.log(password.match(/\s+/));
-    if (password === "") {
+    if (password === undefined || password === "") {
         return false;
     } else if (password.length < 3) {
         return false;
@@ -152,33 +147,18 @@ function password_validation(password) {
     }
 }
 
-function pass_validation_message(password){
-
-    // const password = "";
+function pass_validation_message(password) {
     // console.log(password.match(/\s+/));
     if (password === "") {
-        notifications_field.innerHTML = "Pass field is required!";
-        notifications_field.className = 'error_message'
+        validation_message("Pass field is required!");
     } else if (password.length < 3) {
-        notifications_field.innerHTML = "Min pass length = 3";
-        notifications_field.className = 'error_message'
+        validation_message("Min pass length = 3");
     } else if (password.length > 11) {
-        notifications_field.innerHTML = "Max pass length = 10";
-        notifications_field.className = 'error_message'
+        validation_message("Max pass length = 10");
     } else if (+(password)) {
-        notifications_field.innerHTML = "Pass can not contain digits only";
-        notifications_field.className = 'error_message'
-    } else {
-        switch (action) {
-            case "sign up":
-                ask_confirm_pass();
-                break;
-            case "login":
-                next_step();
-                break;
-        }
-        return true;
-    }
+        validation_message("Pass can not contain digits only");
+    } else validation_message("");
+
 }
 
 function create_user() {
@@ -186,6 +166,7 @@ function create_user() {
         this.nickname = user_nickname;
         this.password = password;
     }
+
     return new_user();
 }
 
