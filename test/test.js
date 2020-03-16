@@ -20,8 +20,6 @@ function connect_display() {
 
 //  калькулятор
 
-
-
 function key1() {
     input = Number(input + "1");
     display_element.innerHTML = input;
@@ -111,7 +109,30 @@ function save() {
     save_history(input, " = ");
     save_history(result, "<br>");
 }
+let all_key;
+let key;
 
+
+function all_key() {
+    all_key = key;
+    key = key1;
+    key = key2;
+    key = key3;
+    key = key4;
+    key = key5;
+    key = key6;
+    key = key7;
+    key = key8;
+    key = key9;
+    key = key0;
+}
+
+
+function result_display() {
+    display_element.innerHTML = result_display;
+    calculate_result = result_display;
+    result_display = result_display + all_key;
+}
 
 
 function calculate_result() {
@@ -119,11 +140,13 @@ function calculate_result() {
         case "sum":
             result = result + input;
             save();
+            result_display();
             break;
 
         case "minus":
             result = result - input;
            save();
+           result_display();
             break;
 
         case "multiply":
