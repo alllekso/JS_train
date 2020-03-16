@@ -135,7 +135,6 @@ aside {
 
 .container {
     width: 760px;
-    height: 500px;
     background-color: #190b28;
     border-radius: 5px;
 }
@@ -273,4 +272,53 @@ aside {
 }
 .publication-button:hover {
     background-color: #7e006e;
+}
+
+.save_publication {
+    background-color: rgb(71, 65, 89);
+    margin: 0 10px;
+    border-radius: 0 0 10px 10px;
+}
+
+.text-user {
+    padding-left: 0;
+}
+
+.user-inform {
+    display: flex;
+    justify-content: space-between;
+}
+
+.data-text {
+    color: #ffd2db;
+}
+
+.user_text_publication {
+    padding: 0 20px 5px;
+}
+
+.user_content {
+    padding: 0 20px 5px;
+}
+.user_content img {
+    width: 100%;
+}
+.button_nav-bar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 20px 10px;
+}
+
+.like:hover::after {
+    content: attr(data-title);
+    position: absolute;
+    z-index: 1;
+    font-family: sans-serif;
+    color: #d0d0d0;
+    font-size: 0.63em;
+}
+
+.hamburger img  {
+    margin: 15px 0 0 450px;
+    height: 30px;
 }
