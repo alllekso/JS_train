@@ -4,6 +4,7 @@ let confirm_password;
 let action;
 let notifications_field;
 let greetings_message;
+let start_name_check
 
 function sign_up() {
     action = "sign up";
@@ -40,7 +41,10 @@ function next_step() {
 }
 
 function next_login_step() {
-    if (check_name() === false) {
+    if (start_name_check === false){
+        start_name_check === true;
+    }
+    else if (check_name() === false) {
         check_name();
     } else if (check_pass() === false) {
         check_pass();
