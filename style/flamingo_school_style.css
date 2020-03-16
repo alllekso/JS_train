@@ -13,7 +13,7 @@ body {
     text-shadow: 8px 3px 11px #5645ff, 0 0 2em #ff0066;
 }
 
-.black_side{
+.black_side {
     float:left;
     filter: drop-shadow(0 4px 6px #5645ff);
 }
@@ -45,14 +45,14 @@ body {
 }
 
 .choose_side_button {
-    margin-left:  15px ;
+    margin-left: 15px;
     padding: 3px 15px;
     border: none;
     border-radius: 3px;
     color: #fff;
     background-color: #ff0066;
     cursor: pointer;
-    font-size: 17px;
+    font-size: 1.1em;
     font-family: sans-serif;
     transition: 0.3s;
 }
@@ -71,14 +71,14 @@ body {
     line-height: 2.5;
     float: right;
     margin: 0 auto;
-    padding:150px;
+    padding: 150px;
     text-shadow: 8px 3px 11px #5645ff, 0 0 2em #ff0066;
     text-indent: 1.5em; /* Отступ первой строки */
     text-align: justify;
 
 }
 
-.art-fond{
+.art-fond {
    width: 90px;
    height: 80px;
    margin: 0;
@@ -111,9 +111,9 @@ body {
 
 }
 
-.copyright{
+.copyright {
     color: #ffffff;
-    font-size: 12px;
+    font-size: 0.75em;
     text-align: center;
     margin: 0 auto;
     padding-top: 200px;

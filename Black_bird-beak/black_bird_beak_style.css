@@ -11,40 +11,40 @@ a {
 }
 
 .navbar {
-   display:flex;
+    display:flex;
     width: 1080px;
     margin: 0 auto;
     justify-content: space-between;
 }
 
-.brand{
+.brand {
     padding: 20px;
     width: 125px;
     height: 30px;
 }
-.ava{
+.ava {
     padding: 20px 30px;
 }
 
-.items_navbar{
+.items_navbar {
     padding: 25px;
 }
 
-.items_navbar a{
+.items_navbar a {
     color: white;
     margin: 0 30px;
 }
 
-aside{
+aside {
     display:flex;
     width: 1080px;
     margin: 0 auto;
     justify-content: center;
 }
 
-.fon{
-    display:flex;
-    width:1080px;
+.fon {
+    display: flex;
+    width: 1080px;
     height: 200px;
     background-color: #27224e;
     margin-bottom: 20px;
@@ -52,7 +52,7 @@ aside{
     position: relative;
 }
 /*Ховер для загрузки обложки*/
-.adding-cover img{
+.adding-cover img {
     position: absolute;
     right: 0;
     top: 10px;
@@ -67,17 +67,17 @@ aside{
     content: attr(data-title);
     position: absolute;
     right: 0;
-    padding:5px 10px;
+    padding: 5px 10px;
     z-index: 1;
     background: rgba(255, 210, 219, 0.9);
     font-family: sans-serif;
     color: black;
-    font-size: 12px;
+    font-size: 0.75em;
     border-radius: 50px;
 }
-.avatar{
-    height: 200px;
-    width: 200px;
+.avatar {
+    height: 13em;
+    width: 13em;
 }
 
 .your-ava img {
@@ -90,10 +90,10 @@ aside{
     z-index: 0;
 }
 /*Ховер под аватаркой */
-.adding-cover2 img{
+.adding-cover2 img {
     position: absolute;
     left: 10px;
-    top:10px;
+    top: 10px;
     width: 3%;
 
 }
@@ -101,25 +101,25 @@ aside{
 .adding-cover2:hover::after {
     content: attr(data-title);
     position: absolute;
-    left:50px;
-    top:150px;
+    left: 50px;
+    top: 150px;
     padding: 10px;
     border-radius: 50px;
     z-index: 10;
     background: rgba(255, 210, 219, 0.9);
     font-family: sans-serif;
     color: black;
-    font-size: 12px;
+    font-size: 0.75em;
 }
 
-.user_name{
-    padding-top: 90px ;
+.user_name {
+    padding-top: 90px;
     color: #d0d0d0;
 }
 
 /*контент сайта*/
 .sidebar {
-    display:flex;
+    display: flex;
     width: 1080px;
     margin: 0 auto;
     justify-content: center;
@@ -160,110 +160,110 @@ aside{
     border-radius: 3px;
 }
 
-.prompt{
+.prompt {
     color: #d0d0d0;
-    font-size: 12px;
-    padding:0 30px;
+    font-size: 0.75em;
+    padding: 0 30px;
     border: none;
-    outline:none;
+    outline: none;
 }
 
-.title-container-friends{
+.title-container-friends {
     display: flex;
 }
 .title-container-friends h3, p {
     color: #d0d0d0;
-    padding:10px 20px 0;
+    padding: 10px 20px 0;
     margin: 0;
 }
 
-.friends{
+.friends {
     background-color: rgba(208, 208, 208, 0.4);
     margin: 10px;
     border-radius: 10px;
     display: flex;
 }
 
-.avatar-friends img{
+.avatar-friends img {
     width: 80px;
     border-radius: 50px;
     padding: 10px;
 }
 
-.avatar-friends p{
-    margin: 0 ;
+.avatar-friends p {
+    margin: 0;
     text-align: center;
-    padding:0 0  10px;
+    padding: 0 0  10px;
     color: #ffffff;
 }
-.avatar-friends{
+.avatar-friends {
     width: 15%;
     justify-content: center;
 }
-.bottom_link a{
-    font-size: 14px;
+.bottom_link a {
+    font-size: 0.88em;
 }
-.bottom_link{
+.bottom_link {
     float: right;
     margin: 0 20px;
 }
 
-.publication_header{
+.publication_header {
     background-color: rgba(126, 0, 110, 0.89);
     margin: 35px 10px 0;
     border-radius: 10px 10px 0 0;
 }
-.icon{
+.icon {
     height: 30px;
     padding: 0 5px;
 }
 
-.publication{
+.publication {
     background-color: rgb(208, 208, 208);
-    margin:0 10px;
-    border-radius:0 0 10px 10px;
+    margin: 0 10px;
+    border-radius: 0 0 10px 10px;
 }
 
-.yourava_mini img{
+.yourava_mini img {
     height: 40px;
     margin: 5px 20px;
     border-radius: 100px;
 }
 
-.publication_input{
+.publication_input {
     background: none;
     outline: none;
     border: none;
-    padding-top:18px;
+    padding-top: 18px;
     width: 400px;
 
 }
 
-.yourava_mini  {
+.yourava_mini {
     display: flex;
     justify-content: space-between;
 }
 
-.publication-button__send{
+.publication-button__send {
     float: right;
     margin: 0 20px;
     display: flex;
 }
 
 
-#publication-button_icon{
+#publication-button_icon {
     background-color: #7E006E;
     border-radius: 100px;
     padding: 0;
-    margin:5px  10px;
+    margin: 5px 10px;
 }
-.icon2{
+.icon2 {
     height: 30px;
     width: 40px;
 }
 
-.publication-button{
-    padding:  10px;
+.publication-button {
+    padding: 10px;
     border: none;
     border-radius: 10px;
     margin: 5px 0;
@@ -271,6 +271,6 @@ aside{
     color: #d0d0d0;
     transition: 1s;
 }
-.publication-button:hover{
+.publication-button:hover {
     background-color: #7e006e;
 }
