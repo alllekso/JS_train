@@ -6,58 +6,68 @@
     <script src="test.js"></script>
     <link rel="stylesheet" href="style-calculator.css">
 </head>
-<body onload="connect_display()">
-<!--<label>-->
-<!--    <input placeholder="First number" id="first_digit">-->
-<!--    <input placeholder="Second number" id="second_digit">-->
+<body>
+    <div class="calculator" style="padding: 60px 60px 10px; display: flex; justify-content: center" >
+        <label>
+            <input placeholder="number1" id="first">
+            <input placeholder="number2" id="second">
+        </label>
+    </div>
+            <div class="group-button-2" style="display: flex; justify-content: center;">
+                <button type="button" id="key" onclick="key2()">2</button>
+                <button type="button" id="key2" onclick="key3()">3</button>
+            </div>
 
-<!--</label>-->
-<!--<div>-->
-<!--    <p>Result:</p>-->
-<!--    <p id="result"></p>-->
+
+        <div class="group-button" style="display: flex; justify-content: center">
+            <button type="button" onclick="sum()">sum</button>
+            <button type="button" onclick="subtraction()">subtraction</button>
+            <button type="button" onclick="division()">division</button>
+            <button type="button" onclick="multiplication()">multiplication</button>
+        </div>
+
+
+        <label style="display: flex; justify-content: center;">
+            <input placeholder="result" id="display" style="width: 120px;">
+        </label>
+
+<!--<div class="wrapper">-->
+<!--<div class="history-bg">-->
+<!--    <p class="title-history">History</p>-->
+<!--    <div  id="history"></div>-->
 <!--</div>-->
-<!--<button type="button" id="sum" onclick="sum()">Sum</button>-->
-<!--<button type="button" id="subtraction" onclick="subtraction()">Subtraction</button>-->
+<!--    <form class="style-form">-->
+
+<!--        <div id="display"></div>-->
 
 
+<!--        <div class="group-icon">-->
+<!--            <button type="button" id="zero" onclick="clean()">c</button>-->
+<!--            <button type="button" onclick="minus()">−</button>-->
+<!--            <button type="button" onclick="sum()">+</button>-->
+<!--            <button type="button" onclick="multiply()">×</button>-->
+<!--            <button type="button" onclick="division()">÷</button>-->
+<!--        </div>-->
 
-<div class="wrapper">
-<div class="history-bg">
-    <p class="title-history">History</p>
-    <div  id="history"></div>
-</div>
-    <form class="style-form">
+<!--        <div class="group-button">-->
+<!--        <button type="button" id="1" onclick=key1()>1</button>-->
+<!--        <button type="button" id="2" onclick=key2()>2</button>-->
+<!--        <button type="button" id="3" onclick=key3()>3</button>-->
+<!--        <button type="button" id="4" onclick=key4()>4</button>-->
+<!--        <button type="button" id="5" onclick=key5()>5</button>-->
+<!--        <br><button type="button" id="6" onclick=key6()>6</button>-->
+<!--        <button type="button"  onclick=key7()>7</button>-->
+<!--        <button type="button"  onclick=key8()>8</button>-->
+<!--        <button type="button"  onclick=key9()>9</button>-->
+<!--        <button type="button"  onclick=key0()>0</button>-->
+<!--        </div>-->
+<!--        <div class="group-icon">-->
+<!--            <br><button type="button" id="sum-button" onclick="calculate_result()">Result</button>-->
+<!--        </div>-->
 
-        <div id="display"></div>
+<!--    </form>-->
 
-
-        <div class="group-icon">
-            <button type="button" id="zero" onclick="clean()">c</button>
-            <button type="button" onclick="minus()">−</button>
-            <button type="button" onclick="sum()">+</button>
-            <button type="button" onclick="multiply()">×</button>
-            <button type="button" onclick="division()">÷</button>
-        </div>
-
-        <div class="group-button">
-        <button type="button" id="1" onclick=key1()>1</button>
-        <button type="button" id="2" onclick=key2()>2</button>
-        <button type="button" id="3" onclick=key3()>3</button>
-        <button type="button" id="4" onclick=key4()>4</button>
-        <button type="button" id="5" onclick=key5()>5</button>
-        <br><button type="button" id="6" onclick=key6()>6</button>
-        <button type="button"  onclick=key7()>7</button>
-        <button type="button"  onclick=key8()>8</button>
-        <button type="button"  onclick=key9()>9</button>
-        <button type="button"  onclick=key0()>0</button>
-        </div>
-        <div class="group-icon">
-            <br><button type="button" id="sum-button" onclick="calculate_result()">Result</button>
-        </div>
-
-    </form>
-
-</div>
+<!--</div>-->
 
 
 
