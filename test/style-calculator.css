@@ -55,6 +55,17 @@ p.title-history {
     border-radius: 10px;
 }
 
+#first {
+    text-decoration: none;
+    border: none;
+    padding: 20px 30px;
+    margin: 10px;
+    width: 83%;
+    font-size: 1.5em;
+    color: #131626;
+    background-color: #70a7ff;
+    border-radius: 10px;
+}
 
 .group-button button, .group-icon button {
     background-color: #ff6781;
@@ -86,61 +97,6 @@ p.title-history {
 .group-button button:hover, .group-icon button:hover {
     background-color: #70a7ff;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .btn {*/
-/*     width: 60px;*/
-/*     height: 60px;*/
-/*     background: #fc0;*/
-/*     display: inline-block;*/
-/*     text-align: center;*/
-/*     line-height: 60px;*/
-/*     user-select: none;*/
-/* }*/
-
-/*.btn:hover {*/
-/*    background: #f70;*/
-/*    color: #fff;*/
-/*}*/
-
-/*#calc-wrap {*/
-/*    padding: 10px;*/
-/*    width: 100%;*/
-/*    text-align: center;*/
-/*    background: #eee;*/
-/*}*/
-
-/*#calc {*/
-/*    width: 240px;*/
-/*    display: inline-block;*/
-/*}*/
-
-/*#inputVal {*/
-/*    width: 100%;*/
-/*    border: 0;*/
-/*    font-size: 16px;*/
-/*    resize: vertical;*/
-/*}*/
-
-
-
 
 .group-button-2 button {
     background-color: #199c42;

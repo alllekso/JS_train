@@ -42,6 +42,16 @@ function key2() {
     document.getElementById("first").value = key;
 }
 
+function key4() {
+    key = +4;
+    document.getElementById("first").value = key;
+}
+
+
+
+
+
+
 function key3() {
     key = +3;
     document.getElementById("second").value = key;
