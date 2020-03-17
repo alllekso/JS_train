@@ -48,7 +48,7 @@ p.title-history {
     border: none;
     padding: 20px 30px;
     margin: 10px;
-    width: 83%;
+    width: 50px;
     font-size: 1.5em;
     color: #131626;
     background-color: #70a7ff;
@@ -56,11 +56,23 @@ p.title-history {
 }
 
 #first {
+     text-decoration: none;
+     border: none;
+     padding: 20px 30px;
+     margin: 10px;
+     width: 50px;
+     font-size: 1.5em;
+     color: #131626;
+     background-color: #70a7ff;
+     border-radius: 10px;
+ }
+
+#second{
     text-decoration: none;
     border: none;
     padding: 20px 30px;
     margin: 10px;
-    width: 83%;
+    width: 50px;
     font-size: 1.5em;
     color: #131626;
     background-color: #70a7ff;
