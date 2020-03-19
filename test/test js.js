@@ -65,3 +65,15 @@ function GO() {
     comparing();
     document.getElementById("display").innerHTML= message;
 }
+let a = !!(2);
+let b = !!(0);
+let c = !!(1);
+let d = !!(undefined);
+// console.log(c);
+
+if (a === true && d === false || b === true && c === true){
+    alert("шоколад")
+}
+else if (a === true && b === false && c === false){
+    alert("хуй")
+} else alert("");
