@@ -85,6 +85,7 @@ let result_1;
 let result_2;
 let result_3;
 
+
 function collbeack() {
     summa();
 }
@@ -95,13 +96,28 @@ function collbeack_3() {
     multi();
 }
 
+function fun() {
+    let x = result_1;
+    x = x + result_2;
+
+}
+function fun_2() {
+    let y = result_2;
+    y = y + result_3;
+
+}
+
 
 function display_result() {
     document.getElementById("display").innerHTML= result_1;
+    fun();
+
 }
 
 function display_result_2() {
     document.getElementById("display").innerHTML= result_2;
+    fun_2();
+
 }
 
 function display_result_3() {
@@ -133,3 +149,6 @@ function multi() {
     display_result_3();
 }
 
+// let a = "ku";
+// a = a + " kareku";
+// alert(a);
