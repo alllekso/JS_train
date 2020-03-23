@@ -45,19 +45,20 @@ let dick_1;
 let dick_2;
 let message;
 
-
+let sum;
 
 
 function comparing() {
     if (dick_1 > dick_2) {
-        message = " Вася, у тебя больше чем у Пети на " +(dick_1 - dick_2) + "cm" ;
+        message = " Вася, у тебя больше чем у Пети на " + Math.abs(dick_1 - dick_2) + "cm" ;
     }else if(dick_1 < dick_2) {
-        message = "Петя, у тебя больше чем у Васи на " +(dick_1 - dick_2) + "cm";
+        message = "Петя, у тебя больше чем у Васи на " + Math.abs(dick_1 - dick_2) + "cm";
     }else {
-        message = "Члены одного размера " ;
+        message = "Члены одного размера " + dick_1 + "cm" ;
     }
 
 }
+
 
 function GO() {
     dick_1 = document.getElementById("dick_1").value;
@@ -72,8 +73,8 @@ let d = !!(undefined);
 // console.log(c);
 
 if (a === true && d === false || b === true && c === true){
-    alert("шоколад")
+    // alert("шоколад")
 }
 else if (a === true && b === false && c === false){
-    alert("хуй")
+    // alert("хуй")
 } else alert("");
