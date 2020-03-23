@@ -84,6 +84,7 @@ let sum_3;
 let result_1;
 let result_2;
 let result_3;
+let history = "";
 
 
 function collbeack() {
@@ -96,32 +97,11 @@ function collbeack_3() {
     multi();
 }
 
-function fun() {
-    let x = result_1;
-    x = x + result_2;
-
-}
-function fun_2() {
-    let y = result_2;
-    y = y + result_3;
-
-}
 
 
 function display_result() {
-    document.getElementById("display").innerHTML= result_1;
-    fun();
+    document.getElementById("display").innerHTML= history;
 
-}
-
-function display_result_2() {
-    document.getElementById("display").innerHTML= result_2;
-    fun_2();
-
-}
-
-function display_result_3() {
-    document.getElementById("display").innerHTML= result_3;
 }
 
 
@@ -130,6 +110,7 @@ function summa(){
     b = 2;
     sum = (+a + +b);
     result_1 = (a + " + " + b + " = " +sum);
+    history = history + result_1 + "<br>";
     display_result();
 }
 
@@ -138,7 +119,8 @@ function minus() {
     b = 3;
     sum_2 = (+a - +b);
     result_2 = (a + " - " + b + " = " +sum_2);
-    display_result_2();
+    history = history + result_2 + "<br>";
+    display_result();
 }
 
 function multi() {
@@ -146,7 +128,8 @@ function multi() {
     b = 2;
     sum_3 = (a * b);
     result_3 = (a + " * " + b + " = " +sum_3);
-    display_result_3();
+    history = history + result_3 + "<br>";
+    display_result();
 }
 
 // let a = "ku";
