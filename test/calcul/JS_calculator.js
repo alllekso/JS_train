@@ -81,49 +81,55 @@ let b;
 let sum;
 let sum_2;
 let sum_3;
-let result;
+let result_1;
+let result_2;
+let result_3;
 
+function collbeack() {
+    summa();
+}
+function collbeack_2() {
+    minus();
+}
+function collbeack_3() {
+    multi();
+}
 
 
 function display_result() {
-     document.getElementById("display").innerHTML= result;
-
+    document.getElementById("display").innerHTML= result_1;
 }
+
+function display_result_2() {
+    document.getElementById("display").innerHTML= result_2;
+}
+
+function display_result_3() {
+    document.getElementById("display").innerHTML= result_3;
+}
+
+
 function summa(){
-    // a = prompt("введите первое значение", );
-    // a = prompt("введите первое значение", );
     a = 6;
     b = 2;
     sum = (+a + +b);
-    //alert('результат добавления равняется ' + sum );
-    result = (a + " + " + b + " = " +sum);
+    result_1 = (a + " + " + b + " = " +sum);
     display_result();
 }
-
-
 
 function minus() {
     a = 5;
     b = 3;
     sum_2 = (+a - +b);
-    //alert('результат вычитания равняется ' +  sum_2);
-    result = (a + " - " + b + " = " +sum_2);
-    display_result();
-
+    result_2 = (a + " - " + b + " = " +sum_2);
+    display_result_2();
 }
 
 function multi() {
     a = 4;
     b = 2;
     sum_3 = (a * b);
-   // alert('рузультат умножения равняется ' + sum_3);
-    result = (a + " * " + b + " = " +sum_3);
-    display_result();
+    result_3 = (a + " * " + b + " = " +sum_3);
+    display_result_3();
 }
 
-function collbeack() {
-    summa();
-    setTimeout(1000);
-    minus();
-    multi();
-}
