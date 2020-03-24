@@ -8,10 +8,19 @@
 </head>
 <body>
 <div id="display" style="width: 200px; height: 100px; background-color: #70a7ff;"></div>
-<div class="group-button">
-<button onclick="collbeack()" > + </button>
-<button onclick="collbeack_2()"> - </button>
-<button onclick="collbeack_3()"> * </button>
-</div>
+        <div class="group-button">
+            <button onclick="collbeack()" > + </button>
+            <button onclick="collbeack_2()"> - </button>
+            <button onclick="collbeack_3()"> * </button>
+        </div>
+    <label>
+        <input id="number_A" onclick="getvalue()" value="6">
+        <input id="number_B" onclick="getvalue()" value="11">
+    </label>
+
+    <div class="group-button">
+        <button id="last_result" onclick="last_result()">Last result</button>
+    </div>
+
 </body>
 </html>
