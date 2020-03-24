@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="style-calculator.css">
+    <script src="F-Calcul.js"></script>
 </head>
 <body onload="get_page_elements()">
 
 <div id="display" style="width: 400px"></div>
     <div class="group-button">
-        <button id="key1" onclick="but1()">1</button>
-        <button id="key2" onclick="">2</button>
+        <button id="key1" onclick="key1()">1</button>
+        <button id="key2" onclick="key2()">2</button>
         <button id="key3" onclick="">3</button>
         <button id="key4" onclick="">4</button>
         <button id="key5" onclick="">5</button>
@@ -25,10 +26,10 @@
 
         <div class="group-button">
             <button id="key+" onclick=""> - </button>
-            <button id="key-" onclick=""> + </button>
+            <button id="key-" onclick="plus()"> + </button>
             <button id="key*" onclick=""> * </button>
             <button id="key/" onclick=""> / </button>
-            <button id="key=" onclick=""> = </button>
+            <button id="key=" onclick="ravno()"> = </button>
 
         </div>
 
