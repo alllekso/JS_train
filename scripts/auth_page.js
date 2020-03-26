@@ -4,7 +4,7 @@ let confirm_password;
 let action;
 let notifications_field;
 let greetings_message;
-let start_name_check
+let start_name_check;
 
 function sign_up() {
     action = "sign up";
@@ -185,8 +185,7 @@ function save_user() {
     console.log("saved");
 }
 
-//https://learn.javascript.ru/indexeddb
-let openRequest = indexedDB.open("users_DB", 1);
-
-
-
+function complete_sign_up() {
+    save_account(db, user_nickname, password);
+}
+//https://webdevblog.ru/izuchaem-indexeddb/
